@@ -1,0 +1,147 @@
+/*Colors
+#0f4c75 nav
+#1b262c footer
+#3282b8 buttons
+#bbe1fa extra
+ */
+
+.navbar {
+	background-color: #0f4c75!important;
+}
+
+/*Footer*------------------------------------------------------------------------------*/
+.site-footer
+{
+  background-color:#1b262c;
+  padding:45px 0 20px;
+  font-size:15px;
+  line-height:24px;
+  color:white;
+}
+.site-footer hr
+{
+  border-top-color:#bbb;
+  opacity:0.5;
+}
+.site-footer hr.small
+{
+  margin:20px 0;
+}
+.site-footer h6
+{
+  color:#bbe1fa;
+  font-size:16px;
+  text-transform:uppercase;
+  margin-top:5px;
+  letter-spacing:2px;
+}
+.site-footer a
+{
+  color:black;
+}
+.site-footer a:hover
+{
+  color:#3366cc;
+  text-decoration:none;
+}
+.footer-links
+{
+  padding-left:0;
+  list-style:none;
+}
+.footer-links li
+{
+  display:block;
+}
+.footer-links a
+{
+  color:white;
+}
+.footer-links a:active,.footer-links a:focus,.footer-links a:hover
+{
+  color:#bbe1fa;
+  text-decoration:none;
+}
+.footer-links.inline li
+{
+  display:inline-block;
+}
+
+.copyright-text
+{
+  margin:0;
+}
+@media (max-width:991px)
+{
+  .site-footer [class^=col-]
+  {
+    margin-bottom:30px;
+  }
+}
+@media (max-width:767px)
+{
+  .site-footer
+  {
+    padding-bottom:0;
+  }
+  .site-footer .copyright-text,.site-footer 
+  {
+    text-align:center;
+  }
+}
+/*End Footer-----------------------------------------------------------------------------*/
+
+.text-white a{
+	color: white!important;
+}
+
+/*Login---------------------------------------------------------------------------------*/
+.form-signin {
+    width: 100%;
+    max-width: 330px;
+    padding: 15px;
+    margin: auto;
+}
+
+.form-signin .form-control {
+    position: relative;
+    box-sizing: border-box;
+    height: auto;
+    padding: 10px;
+    font-size: 16px;
+}
+
+.form-signin input[type="text"] {
+    margin-bottom: -1px;
+    border-bottom-right-radius: 0;
+    border-bottom-left-radius: 0;
+
+}
+
+.form-signin input[type="password"] {
+    margin-bottom: 10px;
+    border-top-left-radius: 0;
+    border-top-right-radius: 0;
+}
+
+.btn-color{
+	background-color: #3282b8;
+	color: white;
+}
+
+
+/*End Login-----------------------------------------------------------------------------*/
+
+
+/*Menu Admin----------------------------------------------------------------------------*/
+.btn-menu {
+	padding: 20px 10px 20px 10px;
+	width: 150px;
+}
+.mr-6{
+	margin-right: 5.3rem;
+}
+
+.ml-6{
+	margin-left: 5.3rem;
+}
