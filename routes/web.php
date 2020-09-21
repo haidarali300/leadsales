@@ -36,3 +36,7 @@ Route::get('/salesman-menu', function () {
 Route::get('/supervisor-menu', function () {
     return view('supervisor-menu');
 });
+
+Route::get('/manage-users', function () {
+    return view('manage-users');
+});
