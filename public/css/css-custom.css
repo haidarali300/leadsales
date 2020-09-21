@@ -166,4 +166,14 @@ main {
 	width: 310px;
 }
 
+/*Create lead---------------------------------------------------------------------------*/
+.btn-create-lead {
+	padding: 10px 10px 10px 10px;
+	width:100%;
+}
 
+.btn-email {
+	padding: 3px;
+	border-radius: 100%; 
+	
+}

@@ -40,3 +40,7 @@ Route::get('/supervisor-menu', function () {
 Route::get('/manage-users', function () {
     return view('manage-users');
 });
+
+Route::get('/create-lead', function () {
+    return view('create-lead');
+});
