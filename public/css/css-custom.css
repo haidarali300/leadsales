@@ -175,5 +175,13 @@ main {
 .btn-email {
 	padding: 3px;
 	border-radius: 100%; 
+}
+
+.btn-check {
+	padding: 3px;
+}
+
+.btn-delete-check {
+	background-color: #F44336;
 	
 }

@@ -44,3 +44,7 @@ Route::get('/manage-users', function () {
 Route::get('/create-lead', function () {
     return view('create-lead');
 });
+
+Route::get('/septup-system', function () {
+    return view('septup-system');
+});
