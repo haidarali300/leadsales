@@ -5,6 +5,17 @@
 #bbe1fa extra
  */
 
+ body {
+    display: flex;
+    min-height: 100vh;
+    flex-direction: column;
+  }
+
+  main {
+    flex: 1 0 auto;
+  }
+  
+/*Navbar------------------------------------------------------------------------------*/
 .navbar {
 	background-color: #0f4c75!important;
 }
@@ -17,6 +28,7 @@
   font-size:15px;
   line-height:24px;
   color:white;
+
 }
 .site-footer hr
 {
