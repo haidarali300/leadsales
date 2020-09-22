@@ -56,3 +56,7 @@ Route::get('/view-lead', function () {
 Route::get('/view-lead-sup', function () {
     return view('view-lead-sup');
 });
+
+Route::get('/view-lead-salesman', function () {
+    return view('view-lead-salesman');
+});
