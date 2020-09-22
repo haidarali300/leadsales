@@ -3,7 +3,7 @@
 @section('content')
  	<main class="">
 	    <div class="mt-2 mb-4 ml-3">
-			<h2>Septup System</h2>
+			<h2>Setup System</h2>
  		</div>
  		<div class="row mx-1">
  			<div class="col-6">

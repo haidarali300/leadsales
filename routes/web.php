@@ -45,6 +45,6 @@ Route::get('/create-lead', function () {
     return view('create-lead');
 });
 
-Route::get('/septup-system', function () {
-    return view('septup-system');
+Route::get('/setup-system', function () {
+    return view('setup-system');
 });
