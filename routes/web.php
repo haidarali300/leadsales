@@ -64,3 +64,7 @@ Route::get('/view-lead-salesman', function () {
 Route::get('/view-new-leads', function () {
     return view('view-new-leads');
 });
+
+Route::get('/lead', function () {
+    return view('lead');
+});
