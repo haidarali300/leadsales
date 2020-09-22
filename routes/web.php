@@ -52,3 +52,7 @@ Route::get('/setup-system', function () {
 Route::get('/view-lead', function () {
     return view('view-lead');
 });
+
+Route::get('/view-lead-sup', function () {
+    return view('view-lead-sup');
+});
