@@ -60,3 +60,7 @@ Route::get('/view-lead-sup', function () {
 Route::get('/view-lead-salesman', function () {
     return view('view-lead-salesman');
 });
+
+Route::get('/view-new-leads', function () {
+    return view('view-new-leads');
+});
