@@ -48,3 +48,7 @@ Route::get('/create-lead', function () {
 Route::get('/setup-system', function () {
     return view('setup-system');
 });
+
+Route::get('/view-lead', function () {
+    return view('view-lead');
+});

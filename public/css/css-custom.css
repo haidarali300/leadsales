@@ -183,5 +183,9 @@ main {
 
 .btn-delete-check {
 	background-color: #F44336;
-	
+}
+
+.btn-dot {
+	background-color: transparent;
+	padding: 0%;
 }
