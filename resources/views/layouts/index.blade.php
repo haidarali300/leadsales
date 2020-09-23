@@ -4,7 +4,7 @@
     <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <title>Hello, world!</title>
+    <title>LeadSalesManager</title>
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
     <link rel="stylesheet" type="text/css" href="css/css-custom.css">
@@ -15,9 +15,8 @@
   <body>
     <header>
         <nav class="navbar navbar-light bg-light">
-          <a class="navbar-brand" href="#">
-            <img src="/docs/4.5/assets/brand/bootstrap-solid.svg" width="30" height="30" class="d-inline-block align-top" alt="" loading="lazy">
-            LSM
+          <a @yield('ref-header') class="navbar-brand" >
+            <img src="images/lo.png" alt="" loading="lazy" style="height: 50px; width: auto;">
           </a>
         </nav>
     </header>

@@ -1,5 +1,9 @@
 @extends('layouts.index')
 
+@section('ref-header')
+	href="{{url('')}}" 
+@endsection
+
 @section('content')
 <main>
 	<div class="container">
@@ -11,7 +15,7 @@
 				<a class="btn btn-color btn-menu ml-2" href="{{url('manage-users')}}" role="button" data-toggle="tooltip" data-placement="right" title="Clients, Salesmen, Supervisors, Admins">Manage Users</a>
 			</div>
 			<div class="col-12 mt-3 text-center">
-				<a class="btn btn-color btn-menu mr-6" href="{{url('statss')}}" role="button" data-toggle="tooltip" data-placement="left" title="View Report, View Graphs, Generate Reports, Generate Graphs"> Stats</a>	
+				<a class="btn btn-color btn-menu mr-6" href="{{url('stats')}}" role="button" data-toggle="tooltip" data-placement="left" title="View Report, View Graphs, Generate Reports, Generate Graphs"> Stats</a>	
 				<a class="btn btn-color btn-menu ml-6" href="{{url('setup-system')}}" role="button" data-toggle="tooltip" data-placement="right" title="Sep Stages, Set Criterias">Setup System</a>
 			</div>
 		</div>

@@ -4,6 +4,10 @@
 <script type="text/javascript" src="js/Chart.bundle.min.js"></script>
 @endsection
 
+@section('ref-header')
+	href="{{url('')}}" 
+@endsection
+
 @section('content')
  	<main class="">
  		<div class="mt-2 mb-4 ml-3">
