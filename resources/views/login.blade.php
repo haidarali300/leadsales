@@ -21,6 +21,14 @@
 	      <button class="btn btn-lg btn-block btn-color mb-4" type="submit">Sign in</button>
 	   <!--   <div class="text-right mt-4"><a href="#">Register</a></div>-->
 	      <p class="mt-1 mb-3 text-muted">&copy; 2019-2020</p>
-	    </form>		
+	    </form>
+	    <br>
+	    <br>
+	    <a href="{{url('admin-menu')}}">Login as Admin</a>
+	    <br>
+	    <a href="{{url('salesman-menu')}}">Login as Salesman</a>
+	    <br>
+	    <a href="{{url('supervisor-menu')}}">Login as Supervisor</a>
  	</main>
+
 @endsection

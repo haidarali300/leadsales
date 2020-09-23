@@ -27,6 +27,10 @@ Route::get('/', function () {
     return view('login');
 });
 
+Route::get('/admin-menu', function () {
+    return view('admin-menu');
+});
+
 Route::get('/salesman-menu', function () {
     return view('salesman-menu');
 });
@@ -38,6 +42,11 @@ Route::get('/supervisor-menu', function () {
 Route::get('/manage-users', function () {
     return view('manage-users');
 });
+
+Route::get('/salesman-create-lead', function () {
+    return view('salesman-create-lead');
+});
+
 
 Route::get('/create-lead', function () {
     return view('create-lead');

@@ -1,7 +1,7 @@
 @extends('layouts.index')
 
 @section('ref-header')
-	href="{{url('admin-menu')}}" 
+	href="{{url('salesman-menu')}}" 
 @endsection
 
 @section('content')
@@ -123,45 +123,7 @@
 				    </div>
 				  </div>
 				</div>
- 			</div>
-
- 			<!--Card Assign-->
- 			<div class="col-4">
- 				<h6 class="ml-4">Assign</h6>
- 				<div class="card py-4">
-				  <div class="card-body">
-				    <form class="mt-4">
-			    	  <div class="form-group d-flex justify-content-center">
-					  	<svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-user" width="30" height="35" viewBox="0 0 24 24" stroke-width="1.5" stroke="#000000" fill="none" stroke-linecap="round" stroke-linejoin="round">
-						  <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
-						  <circle cx="12" cy="7" r="4" />
-						  <path d="M6 21v-2a4 4 0 0 1 4 -4h4a4 4 0 0 1 4 4v2" />
-						</svg>					   
-					    <select class="form-control" id="salesman" style="width: 80%;">
-					      <option selected>Salesman</option>
-					      <option>1</option>
-					      <option>2</option>
-					      <option>3</option>
-					    </select>
-					  </div>
-					  <div class="form-group d-flex justify-content-center pt-4">
-					  	<svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-user" width="30" height="35" viewBox="0 0 24 24" stroke-width="1.5" stroke="#000000" fill="none" stroke-linecap="round" stroke-linejoin="round">
-						  <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
-						  <circle cx="12" cy="7" r="4" />
-						  <path d="M6 21v-2a4 4 0 0 1 4 -4h4a4 4 0 0 1 4 4v2" />
-						</svg>
-					    <select class="form-control" id="supervisor" style="width: 80%;">
-					      <option selected>Supervisor</option>
-					      <option>1</option>
-					      <option>2</option>
-					      <option>3</option>
-					    </select>
-					  </div>
-				    </form>
-				  </div>
-				</div>
-				<a class="btn btn-color btn-create-lead my-3" href="#" role="button">Create</a>
- 			</div>
+ 			</div> 			
  		</div>
  	</main>
 @endsection

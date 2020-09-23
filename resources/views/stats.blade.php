@@ -5,7 +5,7 @@
 @endsection
 
 @section('ref-header')
-	href="{{url('')}}" 
+	href="{{url('admin-menu')}}" 
 @endsection
 
 @section('content')
