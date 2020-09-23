@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <title>LeadSalesManager</title>
     <!-- Bootstrap CSS -->
+    <link  rel="icon"   href="images/login.png" type="image/png" />
     <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
     <link rel="stylesheet" type="text/css" href="css/css-custom.css">
     @yield('link-extra')
