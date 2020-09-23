@@ -18,7 +18,7 @@
 					   	<div class="p-2 w-100 bd-highlight">
 						  <input class="form-check-input" type="checkbox" value="" id="defaultCheck1">
 						  <label class="form-check-label" for="defaultCheck1">
-						    Default checkbox
+						    Contact
 						  </label>
 					   	</div>
 					   	<div class="p-2 flex-shrink-1 bd-highlight">
@@ -36,7 +36,7 @@
 					   	<div class="p-2 w-100 bd-highlight">
 						  <input class="form-check-input" type="checkbox" value="" id="defaultCheck2">
 						  <label class="form-check-label" for="defaultCheck2">
-						    Default checkbox2
+						    Closed
 						  </label>
 					   	</div>
 					   	<div class="p-2 flex-shrink-1 bd-highlight">
@@ -76,7 +76,7 @@
 					   	<div class="p-2 w-100 bd-highlight">
 						  <input class="form-check-input" type="checkbox" value="" id="defaultCheck11">
 						  <label class="form-check-label" for="defaultCheck11">
-						    Default checkbox
+						   	Product Quality
 						  </label>
 					   	</div>
 					   	<div class="p-2 flex-shrink-1 bd-highlight">
@@ -94,7 +94,7 @@
 					   	<div class="p-2 w-100 bd-highlight">
 						  <input class="form-check-input" type="checkbox" value="" id="defaultCheck22">
 						  <label class="form-check-label" for="defaultCheck22">
-						    Default checkbox2
+						    Product Arrival
 						  </label>
 					   	</div>
 					   	<div class="p-2 flex-shrink-1 bd-highlight">

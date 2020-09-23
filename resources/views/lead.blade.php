@@ -249,7 +249,7 @@
 					  <div class="card-body">
 					    <h6 class="mb-4">Quality of Service</h6>
 					    <div class="row ">
-						    <div class="col-2 mt-n1">Criterion: </div>
+						    <div class="col-2 mt-n1">Product Quality: </div>
 				    		<div class="stars col-10 mt-n3 d-flex justify-content-start">
 								<form action="">
 									<input class="star star-5" id="astar-5" type="radio" name="star"/>
@@ -265,7 +265,7 @@
 								</form>								
 							</div>
 							<br><br><br>		
-							<div class="col-2 mt-n1">Criterion: </div>
+							<div class="col-2 mt-n1">Product Arrival: </div>
 				    		<div class="stars col-10 mt-n3 d-flex justify-content-start">
 								<form action="">
 									<input class="star star-5" id="bastar-5" type="radio" name="star"/>
@@ -281,7 +281,7 @@
 								</form>								
 							</div>
 							<br><br><br>		
-							<div class="col-2 mt-n1">Criterion: </div>
+							<div class="col-2 mt-n1">Response Time: </div>
 				    		<div class="stars col-10 mt-n3 d-flex justify-content-start">
 								<form action="">
 									<input class="star star-5" id="castar-5" type="radio" name="star"/>
