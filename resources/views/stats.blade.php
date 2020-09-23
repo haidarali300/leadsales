@@ -49,7 +49,7 @@
 								    <div class="text-center">
 								    	<h5>Salesman Name</h5>
 								    </div>
-								    <div class="mt-3 d-flex justify-content-center">
+								  <!--  <div class="mt-3 d-flex justify-content-center">
 									    <a class="btn btn-color btn-stats" href="#" role="button">
 									  		<svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-external-link" width="24" height="24" viewBox="0 0 24 24" stroke-width="1.5" stroke="#bbe1fa" fill="none" stroke-linecap="round" stroke-linejoin="round">
 											  <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
@@ -58,7 +58,7 @@
 											  <polyline points="15 4 20 4 20 9" />
 											</svg>
 									  	</a>
-								    </div>
+								    </div>-->
 						    	</div>
 						    	<div class="col-9">
 						    		<canvas id="myChart"></canvas> 
@@ -78,7 +78,7 @@
 								    <div class="text-center">
 								    	<h5>Salesman Name</h5>
 								    </div>
-								    <div class="mt-3 d-flex justify-content-center">
+								  <!--  <div class="mt-3 d-flex justify-content-center">
 									    <a class="btn btn-color btn-stats" href="#" role="button">
 									  		<svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-external-link" width="24" height="24" viewBox="0 0 24 24" stroke-width="1.5" stroke="#bbe1fa" fill="none" stroke-linecap="round" stroke-linejoin="round">
 											  <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
@@ -87,7 +87,7 @@
 											  <polyline points="15 4 20 4 20 9" />
 											</svg>
 									  	</a>
-								    </div>
+								    </div>-->
 						    	</div>
 						    	<div class="col-9">
 						    		<canvas id="myChart2"></canvas> 
