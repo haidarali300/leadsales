@@ -57,8 +57,8 @@
 							      	<div class="row">
 							      		<div class="col-8">
 									        <h5 class="card-title">Anne Cuthbert</h5>
-									        <p class="card-text">Lorem ipsum dolor sit</p>
-									        <p class="card-text"><small class="text-muted">Lorem ipsum dolor sit</small></p>
+									        <p class="card-text">Phone</p>
+									        <p class="card-text"><small class="text-muted">Email</small></p>
 							      		</div>
 							      		<div class="col-4">
 							      			<a class="btn btn-color mt-1 mb-3" href="#" role="button">
@@ -89,15 +89,15 @@
 							<div class="card mb-3 col-6 " style="max-width: 430px;">
 							  <div class="row no-gutters">
 							    <div class="col-md-4 d-flex align-items-center">
-							      <img src="images/f.png" class="card-img" alt="...">
+							      <img src="images/h.png" class="card-img" alt="...">
 							    </div>
 							    <div class="col-md-8">
 							      <div class="card-body">
 							      	<div class="row">
 							      		<div class="col-8">
-									        <h5 class="card-title">Anne Cuthbert</h5>
-									        <p class="card-text">Lorem ipsum dolor sit</p>
-									        <p class="card-text"><small class="text-muted">Lorem ipsum dolor sit</small></p>
+									        <h5 class="card-title">Ruby Gillis</h5>
+									        <p class="card-text">Phone</p>
+									        <p class="card-text"><small class="text-muted">Email</small></p>
 							      		</div>
 							      		<div class="col-4">
 							      			<a class="btn btn-color mt-1 mb-3" href="#" role="button">
@@ -150,15 +150,15 @@
 				    		<div class="card mb-3 col-6 mr-4" style="max-width: 430px;">
 							  <div class="row no-gutters">
 							    <div class="col-md-4 d-flex align-items-center">
-							      <img src="images/f.png" class="card-img" alt="...">
+							      <img src="images/g.png" class="card-img" alt="...">
 							    </div>
 							    <div class="col-md-8">
 							      <div class="card-body">
 							      	<div class="row">
 							      		<div class="col-8">
-									        <h5 class="card-title">Anne Cuthbert</h5>
-									        <p class="card-text">Lorem ipsum dolor sit</p>
-									        <p class="card-text"><small class="text-muted">Lorem ipsum dolor sit</small></p>
+									        <h5 class="card-title">Diana Barry</h5>
+									        <p class="card-text">Phone</p>
+									        <p class="card-text"><small class="text-muted">Email</small></p>
 							      		</div>
 							      		<div class="col-4">
 							      			<a class="btn btn-color mt-1 mb-3" href="#" role="button">
@@ -195,9 +195,9 @@
 							      <div class="card-body">
 							      	<div class="row">
 							      		<div class="col-8">
-									        <h5 class="card-title">Matthew Cuthbert</h5>
-									        <p class="card-text">Lorem ipsum</p>
-									        <p class="card-text"><small class="text-muted">Lorem ipsum dolor sit</small></p>
+									        <h5 class="card-title">Cole Mackenzie</h5>
+									        <p class="card-text">Phone</p>
+									        <p class="card-text"><small class="text-muted">Email</small></p>
 							      		</div>
 							      		<div class="col-4">
 							      			<a class="btn btn-color mt-1 mb-3" href="#" role="button">
@@ -229,7 +229,7 @@
 			    </div>
 			 
 			  </div>
-			  <!-SALESMEN--->
+			  <!--SALESMEN--->
 			  <div class="tab-pane fade" id="salesmen" role="tabpanel" aria-labelledby="salesmen-tab">
 				<form class="form-inline my-3">
 			      <input class="form-control mr-2" type="search" placeholder="Search" aria-label="Search" style="width: 27%;">
@@ -251,15 +251,15 @@
 				    		<div class="card mb-3 col-6 mr-4" style="max-width: 430px;">
 							  <div class="row no-gutters">
 							    <div class="col-md-4 d-flex align-items-center">
-							      <img src="images/f.png" class="card-img" alt="...">
+							      <img src="images/b.png" class="card-img" alt="...">
 							    </div>
 							    <div class="col-md-8">
 							      <div class="card-body">
 							      	<div class="row">
 							      		<div class="col-8">
-									        <h5 class="card-title">Anne Cuthbert</h5>
-									        <p class="card-text">Lorem ipsum dolor sit</p>
-									        <p class="card-text"><small class="text-muted">Lorem ipsum dolor sit</small></p>
+									        <h5 class="card-title">Muriel Stacy</h5>
+									        <p class="card-text">Phone</p>
+									        <p class="card-text"><small class="text-muted">Email</small></p>
 							      		</div>
 							      		<div class="col-4">
 							      			<a class="btn btn-color mt-1 mb-3" href="#" role="button">
@@ -290,15 +290,15 @@
 							<div class="card mb-3 col-6 " style="max-width: 430px;">
 							  <div class="row no-gutters">
 							    <div class="col-md-4 d-flex align-items-center">
-							      <img src="images/e.png" class="card-img" alt="...">
+							      <img src="images/c.png" class="card-img" alt="...">
 							    </div>
 							    <div class="col-md-8">
 							      <div class="card-body">
 							      	<div class="row">
 							      		<div class="col-8">
-									        <h5 class="card-title">Matthew Cuthbert</h5>
-									        <p class="card-text">Lorem ipsum</p>
-									        <p class="card-text"><small class="text-muted">Lorem ipsum dolor sit</small></p>
+									        <h5 class="card-title">Josephine Spurgeon</h5>
+									        <p class="card-text">Phone</p>
+									        <p class="card-text"><small class="text-muted">Email</small></p>
 							      		</div>
 							      		<div class="col-4">
 							      			<a class="btn btn-color mt-1 mb-3" href="#" role="button">
@@ -350,15 +350,15 @@
 				    		<div class="card mb-3 col-6 mr-4" style="max-width: 430px;">
 							  <div class="row no-gutters">
 							    <div class="col-md-4 d-flex align-items-center">
-							      <img src="images/f.png" class="card-img" alt="...">
+							      <img src="images/d.png" class="card-img" alt="...">
 							    </div>
 							    <div class="col-md-8">
 							      <div class="card-body">
 							      	<div class="row">
 							      		<div class="col-8">
-									        <h5 class="card-title">Anne Cuthbert</h5>
-									        <p class="card-text">Lorem ipsum dolor sit</p>
-									        <p class="card-text"><small class="text-muted">Lorem ipsum dolor sit</small></p>
+									        <h5 class="card-title">Mary Lacroix</h5>
+									        <p class="card-text">Phone</p>
+									        <p class="card-text"><small class="text-muted">Email</small></p>
 							      		</div>
 							      		<div class="col-4">
 							      			<a class="btn btn-color mt-1 mb-3" href="#" role="button">
@@ -395,9 +395,9 @@
 							      <div class="card-body">
 							      	<div class="row">
 							      		<div class="col-8">
-									        <h5 class="card-title">Matthew Cuthbert</h5>
-									        <p class="card-text">Lorem ipsum</p>
-									        <p class="card-text"><small class="text-muted">Lorem ipsum dolor sit</small></p>
+									        <h5 class="card-title">Gilbert Blythe</h5>
+									        <p class="card-text">Phone</p>
+									        <p class="card-text"><small class="text-muted">Email</small></p>
 							      		</div>
 							      		<div class="col-4">
 							      			<a class="btn btn-color mt-1 mb-3" href="#" role="button">
