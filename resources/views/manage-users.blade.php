@@ -32,7 +32,7 @@
 			    </form>
 			    <div class="row">
 			    	<div class="col-3 d-flex align-items-center">
-			    		<a class="btn btn-color btn-create ml-4" href="#" role="button">
+			    		<a class="btn btn-color btn-create ml-4" href="{{url('create-user')}}" role="button">
 			    			<svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-circle-plus" width="34" height="34" viewBox="0 0 24 24" stroke-width="1.5" stroke="#bbe1fa" fill="none" stroke-linecap="round" stroke-linejoin="round">
 							  <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
 							  <circle cx="12" cy="12" r="9" />
@@ -132,7 +132,7 @@
 			    </form>
 			    <div class="row">
 			    	<div class="col-3 d-flex align-items-center">
-			    		<a class="btn btn-color btn-create ml-4" href="#" role="button">
+			    		<a class="btn btn-color btn-create ml-4" href="{{url('create-user')}}" role="button">
 			    			<svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-circle-plus" width="34" height="34" viewBox="0 0 24 24" stroke-width="1.5" stroke="#bbe1fa" fill="none" stroke-linecap="round" stroke-linejoin="round">
 							  <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
 							  <circle cx="12" cy="12" r="9" />
@@ -233,7 +233,7 @@
 			    </form>
 			    <div class="row">
 			    	<div class="col-3 d-flex align-items-center">
-			    		<a class="btn btn-color btn-create ml-4" href="#" role="button">
+			    		<a class="btn btn-color btn-create ml-4" href="{{url('create-user')}}" role="button">
 			    			<svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-circle-plus" width="34" height="34" viewBox="0 0 24 24" stroke-width="1.5" stroke="#bbe1fa" fill="none" stroke-linecap="round" stroke-linejoin="round">
 							  <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
 							  <circle cx="12" cy="12" r="9" />
@@ -332,7 +332,7 @@
 			    </form>
 			    <div class="row">
 			    	<div class="col-3 d-flex align-items-center">
-			    		<a class="btn btn-color btn-create ml-4" href="#" role="button">
+			    		<a class="btn btn-color btn-create ml-4" href="{{url('create-user')}}" role="button">
 			    			<svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-circle-plus" width="34" height="34" viewBox="0 0 24 24" stroke-width="1.5" stroke="#bbe1fa" fill="none" stroke-linecap="round" stroke-linejoin="round">
 							  <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
 							  <circle cx="12" cy="12" r="9" />
