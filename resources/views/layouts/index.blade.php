@@ -28,7 +28,14 @@
         <div class="row">
           <div class="col-sm-12 col-md-9">
             <h6>About</h6>
-            <p class="text-justify">LeadSalesManager.com <i>CODE WANTS TO BE SIMPLE </i> is an initiative  to help the upcoming programmers with the code. Scanfcode focuses on providing the most efficient code or snippets as the code wants to be simple. We will help programmers build up concepts in different programming languages that include C, C++, Java, HTML, CSS, Bootstrap, JavaScript, PHP, Android, SQL and Algorithm.</p>
+            <div class="row">
+              <div class="col-1 text-left">
+                <img src="images/me.jpg" style="border-radius: 100%; height: 60px; width: auto;" class="">
+              </div>
+              <div class="col-11 mt-2">
+                <p class="text-justify">Developed by <b>Haidar Ali Alruwayjih</b>.<br> Mail: haidaraliaalruwayj@mail.adelphi.edu</p>      
+              </div>
+            </div> 
           </div>
           <div class="col-xs-6 col-md-3">
             <h6>Quick Links</h6>
