@@ -39,7 +39,7 @@
 							    <div class="d-flex justify-content-between">
 							   	  <div class="p-2 bd-highlight">Client Name</div>
 								  <div class="p-2 bd-highlight mt-n1">
-								  	<a class="btn btn-dot" href="#" role="button">
+								  	<a class="btn btn-dot" href="{{url('lead')}}" role="button">
 								  		<svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-dots" width="34" height="34" viewBox="0 0 24 24" stroke-width="1.5" stroke="#000000" fill="none" stroke-linecap="round" stroke-linejoin="round">
 										  <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
 										  <circle cx="5" cy="12" r="1" />
@@ -79,7 +79,7 @@
 							    <div class="d-flex justify-content-between">
 							   	  <div class="p-2 bd-highlight">Client Name</div>
 								  <div class="p-2 bd-highlight mt-n1">
-								  	<a class="btn btn-dot" href="#" role="button">
+								  	<a class="btn btn-dot" href="{{url('lead')}}" role="button">
 								  		<svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-dots" width="34" height="34" viewBox="0 0 24 24" stroke-width="1.5" stroke="#000000" fill="none" stroke-linecap="round" stroke-linejoin="round">
 										  <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
 										  <circle cx="5" cy="12" r="1" />
@@ -128,7 +128,7 @@
 							    <div class="d-flex justify-content-between">
 							   	  <div class="p-2 bd-highlight">Client Name</div>
 								  <div class="p-2 bd-highlight mt-n1">
-								  	<a class="btn btn-dot" href="#" role="button">
+								  	<a class="btn btn-dot" href="{{url('lead')}}" role="button">
 								  		<svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-dots" width="34" height="34" viewBox="0 0 24 24" stroke-width="1.5" stroke="#000000" fill="none" stroke-linecap="round" stroke-linejoin="round">
 										  <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
 										  <circle cx="5" cy="12" r="1" />
@@ -168,7 +168,7 @@
 							    <div class="d-flex justify-content-between">
 							   	  <div class="p-2 bd-highlight">Client Name</div>
 								  <div class="p-2 bd-highlight mt-n1">
-								  	<a class="btn btn-dot" href="#" role="button">
+								  	<a class="btn btn-dot" href="{{url('lead')}}" role="button">
 								  		<svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-dots" width="34" height="34" viewBox="0 0 24 24" stroke-width="1.5" stroke="#000000" fill="none" stroke-linecap="round" stroke-linejoin="round">
 										  <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
 										  <circle cx="5" cy="12" r="1" />
@@ -217,7 +217,7 @@
 							    <div class="d-flex justify-content-between">
 							   	  <div class="p-2 bd-highlight">Client Name</div>
 								  <div class="p-2 bd-highlight mt-n1">
-								  	<a class="btn btn-dot" href="#" role="button">
+								  	<a class="btn btn-dot" href="{{url('lead')}}" role="button">
 								  		<svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-dots" width="34" height="34" viewBox="0 0 24 24" stroke-width="1.5" stroke="#000000" fill="none" stroke-linecap="round" stroke-linejoin="round">
 										  <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
 										  <circle cx="5" cy="12" r="1" />
@@ -257,7 +257,7 @@
 							    <div class="d-flex justify-content-between">
 							   	  <div class="p-2 bd-highlight">Client Name</div>
 								  <div class="p-2 bd-highlight mt-n1">
-								  	<a class="btn btn-dot" href="#" role="button">
+								  	<a class="btn btn-dot" href="{{url('lead')}}" role="button">
 								  		<svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-dots" width="34" height="34" viewBox="0 0 24 24" stroke-width="1.5" stroke="#000000" fill="none" stroke-linecap="round" stroke-linejoin="round">
 										  <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
 										  <circle cx="5" cy="12" r="1" />
