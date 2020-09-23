@@ -110,7 +110,7 @@
 								      <img src="images/f.png" class="card-img" alt="...">
 								    </div>
 								    <div class="text-center">
-								    	<h5>Salesman Name</h5>
+								    	<h5>Anne Cuthbert</h5>
 								    </div>
 								  <!--  <div class="mt-3 d-flex justify-content-center">
 									    <a class="btn btn-color btn-stats" href="#" role="button">
@@ -139,7 +139,7 @@
 								      <img src="images/e.png" class="card-img" alt="...">
 								    </div>
 								    <div class="text-center">
-								    	<h5>Salesman Name</h5>
+								    	<h5>Gilbert Blythe</h5>
 								    </div>
 								  <!--  <div class="mt-3 d-flex justify-content-center">
 									    <a class="btn btn-color btn-stats" href="#" role="button">
