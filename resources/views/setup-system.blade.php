@@ -9,7 +9,7 @@
 	    <div class="mt-2 mb-4 ml-3">
 			<h2>Setup System</h2>
  		</div>
- 		<div class="row mx-1">
+ 		<div class="row mx-1 mb-4">
  			<div class="col-6">
  				<h6 class="ml-4">Set Stages</h6>
  				<div class="card">
