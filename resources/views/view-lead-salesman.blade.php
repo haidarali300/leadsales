@@ -117,6 +117,86 @@
 							  </div>
 							</div>
 				    	</div>
+				    	<div class="col-6 mt-4">
+				    		<div class="card">
+							  <div class="card-body">
+							    <div class="d-flex justify-content-between">
+							   	  <div class="p-2 bd-highlight">Client Name</div>
+								  <div class="p-2 bd-highlight mt-n1">
+								  	<a class="btn btn-dot" href="{{url('lead')}}" role="button">
+								  		<svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-dots" width="34" height="34" viewBox="0 0 24 24" stroke-width="1.5" stroke="#000000" fill="none" stroke-linecap="round" stroke-linejoin="round">
+										  <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+										  <circle cx="5" cy="12" r="1" />
+										  <circle cx="12" cy="12" r="1" />
+										  <circle cx="19" cy="12" r="1" />
+										</svg>
+								  	</a>
+								  </div>
+								</div>
+								<div class="containerA">
+								  <div class="progressA">
+								    <div class="progress-track"></div>
+								    <div id="step1" class="progress-step">
+								      <div>Contact</div>
+								    </div>
+								    <div id="step2" class="progress-step">
+								      <div>Budget</div>
+								    </div>
+								    <div id="step3" class="progress-step">
+								      <div>Negotiation</div>
+								    </div>
+								    <div id="step4" class="progress-step">
+								      <div>Closing</div>
+								    </div>
+								    <div id="step5" class="progress-step">
+								      <div>Quality & Service</div>
+								    </div>
+								   </div>
+								    <!--space for button next-->
+								</div>  
+							  </div>
+							</div>
+				    	</div>
+				    	<div class="col-6 mt-4">
+				    		<div class="card">
+							  <div class="card-body">
+							    <div class="d-flex justify-content-between">
+							   	  <div class="p-2 bd-highlight">Client Name</div>
+								  <div class="p-2 bd-highlight mt-n1">
+								  	<a class="btn btn-dot" href="{{url('lead')}}" role="button">
+								  		<svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-dots" width="34" height="34" viewBox="0 0 24 24" stroke-width="1.5" stroke="#000000" fill="none" stroke-linecap="round" stroke-linejoin="round">
+										  <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+										  <circle cx="5" cy="12" r="1" />
+										  <circle cx="12" cy="12" r="1" />
+										  <circle cx="19" cy="12" r="1" />
+										</svg>
+								  	</a>
+								  </div>
+								</div>
+								<div class="containerA">
+								  <div class="progressA">
+								    <div class="progress-track"></div>
+								    <div id="step1" class="progress-step">
+								      <div>Contact</div>
+								    </div>
+								    <div id="step2" class="progress-step">
+								      <div>Budget</div>
+								    </div>
+								    <div id="step3" class="progress-step">
+								      <div>Negotiation</div>
+								    </div>
+								    <div id="step4" class="progress-step">
+								      <div>Closing</div>
+								    </div>
+								    <div id="step5" class="progress-step">
+								      <div>Quality & Service</div>
+								    </div>
+								   </div>
+								    <!--space for button next-->
+								</div>  
+							  </div>
+							</div>
+				    	</div>
 				    </div>
 			  </div>
 			  <!--Lost-->
@@ -206,6 +286,86 @@
 							  </div>
 							</div>
 				    	</div>
+				    	<div class="col-6 mt-4">
+				    		<div class="card">
+							  <div class="card-body">
+							    <div class="d-flex justify-content-between">
+							   	  <div class="p-2 bd-highlight">Client Name</div>
+								  <div class="p-2 bd-highlight mt-n1">
+								  	<a class="btn btn-dot" href="{{url('lead')}}" role="button">
+								  		<svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-dots" width="34" height="34" viewBox="0 0 24 24" stroke-width="1.5" stroke="#000000" fill="none" stroke-linecap="round" stroke-linejoin="round">
+										  <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+										  <circle cx="5" cy="12" r="1" />
+										  <circle cx="12" cy="12" r="1" />
+										  <circle cx="19" cy="12" r="1" />
+										</svg>
+								  	</a>
+								  </div>
+								</div>
+								<div class="containerA">
+								  <div class="progressA">
+								    <div class="progress-track"></div>
+								    <div id="step1" class="progress-step">
+								      <div>Contact</div>
+								    </div>
+								    <div id="step2" class="progress-step">
+								      <div>Budget</div>
+								    </div>
+								    <div id="step3" class="progress-step">
+								      <div>Negotiation</div>
+								    </div>
+								    <div id="step4" class="progress-step">
+								      <div>Closing</div>
+								    </div>
+								    <div id="step5" class="progress-step">
+								      <div>Quality & Service</div>
+								    </div>
+								   </div>
+								    <!--space for button next-->
+								</div>  
+							  </div>
+							</div>
+				    	</div>
+				    	<div class="col-6 mt-4">
+				    		<div class="card">
+							  <div class="card-body">
+							    <div class="d-flex justify-content-between">
+							   	  <div class="p-2 bd-highlight">Client Name</div>
+								  <div class="p-2 bd-highlight mt-n1">
+								  	<a class="btn btn-dot" href="{{url('lead')}}" role="button">
+								  		<svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-dots" width="34" height="34" viewBox="0 0 24 24" stroke-width="1.5" stroke="#000000" fill="none" stroke-linecap="round" stroke-linejoin="round">
+										  <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+										  <circle cx="5" cy="12" r="1" />
+										  <circle cx="12" cy="12" r="1" />
+										  <circle cx="19" cy="12" r="1" />
+										</svg>
+								  	</a>
+								  </div>
+								</div>
+								<div class="containerA">
+								  <div class="progressA">
+								    <div class="progress-track"></div>
+								    <div id="step1" class="progress-step">
+								      <div>Contact</div>
+								    </div>
+								    <div id="step2" class="progress-step">
+								      <div>Budget</div>
+								    </div>
+								    <div id="step3" class="progress-step">
+								      <div>Negotiation</div>
+								    </div>
+								    <div id="step4" class="progress-step">
+								      <div>Closing</div>
+								    </div>
+								    <div id="step5" class="progress-step">
+								      <div>Quality & Service</div>
+								    </div>
+								   </div>
+								    <!--space for button next-->
+								</div>  
+							  </div>
+							</div>
+				    	</div>
 				    </div>
 			  </div>
 			  <!--Closed-->
@@ -291,6 +451,86 @@
 								    </div>
 								   </div>
 								   <!--space for button next-->
+								</div>  
+							  </div>
+							</div>
+				    	</div>
+				    	<div class="col-6 mt-4">
+				    		<div class="card">
+							  <div class="card-body">
+							    <div class="d-flex justify-content-between">
+							   	  <div class="p-2 bd-highlight">Client Name</div>
+								  <div class="p-2 bd-highlight mt-n1">
+								  	<a class="btn btn-dot" href="{{url('lead')}}" role="button">
+								  		<svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-dots" width="34" height="34" viewBox="0 0 24 24" stroke-width="1.5" stroke="#000000" fill="none" stroke-linecap="round" stroke-linejoin="round">
+										  <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+										  <circle cx="5" cy="12" r="1" />
+										  <circle cx="12" cy="12" r="1" />
+										  <circle cx="19" cy="12" r="1" />
+										</svg>
+								  	</a>
+								  </div>
+								</div>
+								<div class="containerA">
+								  <div class="progressA">
+								    <div class="progress-track"></div>
+								    <div id="step1" class="progress-step">
+								      <div>Contact</div>
+								    </div>
+								    <div id="step2" class="progress-step">
+								      <div>Budget</div>
+								    </div>
+								    <div id="step3" class="progress-step">
+								      <div>Negotiation</div>
+								    </div>
+								    <div id="step4" class="progress-step">
+								      <div>Closing</div>
+								    </div>
+								    <div id="step5" class="progress-step">
+								      <div>Quality & Service</div>
+								    </div>
+								   </div>
+								    <!--space for button next-->
+								</div>  
+							  </div>
+							</div>
+				    	</div>
+				    	<div class="col-6 mt-4">
+				    		<div class="card">
+							  <div class="card-body">
+							    <div class="d-flex justify-content-between">
+							   	  <div class="p-2 bd-highlight">Client Name</div>
+								  <div class="p-2 bd-highlight mt-n1">
+								  	<a class="btn btn-dot" href="{{url('lead')}}" role="button">
+								  		<svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-dots" width="34" height="34" viewBox="0 0 24 24" stroke-width="1.5" stroke="#000000" fill="none" stroke-linecap="round" stroke-linejoin="round">
+										  <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+										  <circle cx="5" cy="12" r="1" />
+										  <circle cx="12" cy="12" r="1" />
+										  <circle cx="19" cy="12" r="1" />
+										</svg>
+								  	</a>
+								  </div>
+								</div>
+								<div class="containerA">
+								  <div class="progressA">
+								    <div class="progress-track"></div>
+								    <div id="step1" class="progress-step">
+								      <div>Contact</div>
+								    </div>
+								    <div id="step2" class="progress-step">
+								      <div>Budget</div>
+								    </div>
+								    <div id="step3" class="progress-step">
+								      <div>Negotiation</div>
+								    </div>
+								    <div id="step4" class="progress-step">
+								      <div>Closing</div>
+								    </div>
+								    <div id="step5" class="progress-step">
+								      <div>Quality & Service</div>
+								    </div>
+								   </div>
+								    <!--space for button next-->
 								</div>  
 							  </div>
 							</div>
