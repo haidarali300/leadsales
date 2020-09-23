@@ -249,6 +249,11 @@ label.star:before {
 .carousel-control-prev-icon {
  	background-color: black!important;
 }
+
+
+.carousel-control-next, .carousel-control-prev {
+	width: 10%!important;
+}
 /*Stats----------------------------------------------------------------------------*/
 
 .btn-stats {
