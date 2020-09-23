@@ -22,5 +22,5 @@ Homestead.json
 /.vagrant
 .phpunit.result.cache
 .env.example
-probar.bat
 re.env
+.DS_Store

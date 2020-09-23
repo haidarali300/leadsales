@@ -66,3 +66,11 @@ Route::get('/view-new-leads', function () {
 Route::get('/lead', function () {
     return view('lead');
 });
+
+Route::get('/stats', function () {
+    return view('stats');
+});
+
+Route::get('/create-user', function () {
+    return view('create-user');
+});

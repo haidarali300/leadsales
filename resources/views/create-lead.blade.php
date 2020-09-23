@@ -67,7 +67,7 @@
 									</fieldset>
 									<div class="form-row align-items-center col-12">
 									    <div class="col-6 my-1">
-									      <label class="sr-only" for="email">Name</label>
+									      <label class="sr-only" for="email">Email</label>
 									      <input type="email" class="form-control" id="email" placeholder="Email">
 									    </div>
 									    <div class="form-group col-5 my-1 ">

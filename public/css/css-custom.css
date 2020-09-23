@@ -249,3 +249,15 @@ label.star:before {
 .carousel-control-prev-icon {
  	background-color: black!important;
 }
+/*Stats----------------------------------------------------------------------------*/
+
+.btn-stats {
+	padding: 5px;
+}
+
+/*Create User----------------------------------------------------------------------*/
+.btn-create-user {
+	padding: 10px 10px 10px 10px;
+	width: 100px;
+	
+}
