@@ -118,6 +118,7 @@
 									    <label class="custom-file-label" for="File">Choose file...</label>   
 									</div>
 				    			</div>
+				    			<a class="btn btn-color btn-create-lead my-3" href="#" role="button">Create</a>
 				    		</form>
 				    	</div>
 				    </div>

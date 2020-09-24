@@ -68,8 +68,7 @@
 								    <div id="step5" class="progress-step">
 								      <div>Quality & Service</div>
 								    </div>
-								   </div>
-								   <button class="btn-next" onClick=next() style="top: 85%; right: 5%;">Next Step</button>
+								   </div>								   
 								</div>  
 							  </div>
 							</div>
