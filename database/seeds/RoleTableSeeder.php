@@ -17,7 +17,7 @@ class RoleTableSeeder extends Seeder
         $supervisor = Role::create(['name' => 'supervisor']);
         $salesman = Role::create(['name' => 'salesman']);
 
-        $permission = Permission::create(['name' => 'create.lead', 'guard_name' => 'web']);
-        $admin->givePermissionTo($permission);
+        $admin->givePermissionTo(Permission::create(['name' => 'create.lead', 'guard_name' => 'web']));
+        $admin->givePermissionTo(Permission::create(['name' => 'create.stage', 'guard_name' => 'web']));
     }
 }
