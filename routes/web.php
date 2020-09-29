@@ -20,7 +20,7 @@ Route::get('/index', function () {
     return view('login');
 });
 
-Route::get('/login', function () {
+Route::get('/loginx', function () {
     return view('login');
 });
 
@@ -40,8 +40,16 @@ Route::get('/supervisor-menu', function () {
     return view('supervisor-menu');
 });
 
-Route::get('/manage-users', function () {
-    return view('manage-users');
+Route::middleware(['auth'])->group(function() {
+    Route::prefix('/users')->group(function() {
+        Route::get   ('/create/{role}', 'UserController@create')->name('users.create');
+        Route::post  ('/create/{role}', 'UserController@store')->name('users.store');
+        Route::get   ('/{role}/{user}', 'UserController@show')->name('users.show');
+        Route::get   ('/{role}/{user}/edit', 'UserController@edit')->name('users.edit');
+        Route::put   ('/{role}/{user}', 'UserController@update')->name('users.update');
+        Route::delete('/{role}/{user}', 'UserController@destroy')->name('users.destroy');
+        Route::get   ('/', 'UserController@index')->name('users.index');
+    });
 });
 
 Route::get('/salesman-create-lead', function () {
@@ -53,9 +61,7 @@ Route::get('/create-lead', function () {
     return view('create-lead');
 });
 
-Route::get('/setup-system', function () {
-    return view('setup-system');
-});
+Route::resource('/setup-system', 'SetupController');
 
 Route::get('/view-lead', function () {
     return view('view-lead');
@@ -79,8 +85,4 @@ Route::get('/lead', function () {
 
 Route::get('/stats', function () {
     return view('stats');
-});
-
-Route::get('/create-user', function () {
-    return view('create-user');
 });

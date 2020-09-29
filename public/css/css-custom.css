@@ -143,6 +143,26 @@ main {
 	color: white;
 }
 
+.btn-success {
+  background-color: forestgreen;
+  color: white
+}
+
+.iti { 
+  width: 100%; 
+}
+
+.invalid-phone {
+  border: 1px solid red;
+}
+
+.form-control-invalid:focus {
+  color: #495057;
+  background-color: #fff;
+  border-color: rgb(228, 209, 209);
+  outline: 0;
+  box-shadow: 0 0 0 0.2rem rgb(255, 8, 8);
+}
 
 /*End Login-----------------------------------------------------------------------------*/
 

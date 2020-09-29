@@ -30,8 +30,7 @@ class RouteServiceProvider extends ServiceProvider
      */
     public function boot()
     {
-        //
-
+        Route::pattern('role', 'admin|supervisor|client|salesman');
         parent::boot();
     }
 
