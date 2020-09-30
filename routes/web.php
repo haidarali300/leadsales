@@ -12,15 +12,15 @@ use Illuminate\Support\Facades\Route;
 | contains the "web" middleware group. Now create something great!
 |
 */
-Auth::routes();
+
+Route::get ('/login', 'Auth\LoginController@showLoginForm')->name('login');
+Route::post('/login', 'Auth\LoginController@login');
+Route::post('/logout', 'Auth\LoginController@logout')->name('logout');
+
 Route::get('/home', 'HomeController@index')->name('home');
 
 
 Route::get('/index', function () {
-    return view('login');
-});
-
-Route::get('/loginx', function () {
     return view('login');
 });
 
@@ -57,9 +57,7 @@ Route::get('/salesman-create-lead', function () {
 });
 
 
-Route::get('/create-lead', function () {
-    return view('create-lead');
-});
+Route::resource('/leads', 'LeadController');
 
 Route::resource('/setup-system', 'SetupController');
 

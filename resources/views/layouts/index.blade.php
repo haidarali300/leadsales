@@ -6,11 +6,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <title>LeadSalesManager</title>
     <!-- Bootstrap CSS -->
-    <link  rel="icon"   href="images/login.png" type="image/png" />
+    <link rel="icon"   href="{{ asset('images/login.png') }}" type="image/png" />
     <link rel="stylesheet" type="text/css" href="{{ asset('css/bootstrap.min.css') }}">
     <link rel="stylesheet" type="text/css" href="{{ asset('css/css-custom.css') }}">
     @yield('link-extra')
-
   </head>
 
   <body>
@@ -19,13 +18,21 @@
           <a @yield('ref-header') class="navbar-brand" >
             <img src="{{asset('images/lo.png')}}" alt="" loading="lazy" style="height: 50px; width: auto;">
           </a>
-          <a href="{{route('login')}}">
+          @guest
+          <a class="btn btn-primary" href="{{route('login')}}">Login</a>
+          @else
+          <a href="{{ route('logout') }}" onclick="event.preventDefault(); document.getElementById('logout-form').submit();">
             <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-x" width="24" height="24" viewBox="0 0 24 24" stroke-width="1.5" stroke="#bbe1fa" fill="none" stroke-linecap="round" stroke-linejoin="round">
               <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
               <line x1="18" y1="6" x2="6" y2="18" />
               <line x1="6" y1="6" x2="18" y2="18" />
             </svg>
           </a>
+          </form>
+          <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
+              @csrf
+          </form>
+          @endguest
         </nav>
     </header>
     @yield('content')
@@ -66,8 +73,9 @@
     </footer>
 
     <!-- Optional JavaScript -->
-    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+    <script> @guest window.sessionStorage.removeItem('api_token'); @else window.sessionStorage.setItem('api_token', '{{auth()->user()->api_token}}'); @endauth </script>
+    <script type="text/javascript" src="{{asset('js/jquery-3.5.1.min.js')}}"></script>
+    <script type="text/javascript" src="{{asset('js/popper.min.js')}}"></script>
     <script type="text/javascript" src="{{asset('js/bootstrap.min.js')}}"></script>
     @yield('js-extra')
   </body>

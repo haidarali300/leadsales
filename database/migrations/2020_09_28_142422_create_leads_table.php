@@ -18,9 +18,9 @@ class CreateLeadsTable extends Migration
             $table->unsignedBigInteger('client_id');
             $table->unsignedBigInteger('salesman_id');
             $table->unsignedBigInteger('supervisor_id');
-            $table->unsignedBigInteger('category_id')->nullable();
-            $table->unsignedBigInteger('origin_id')->nullable();
-            $table->text('description')->nullable();
+            $table->unsignedBigInteger('category_id');
+            $table->unsignedBigInteger('origin_id');
+            $table->text('description');
             $table->integer('state')->default(0); // 0: active, 1: lost, 2: closed
             $table->timestamps();
 
