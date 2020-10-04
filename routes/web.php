@@ -56,10 +56,18 @@ Route::get('/salesman-create-lead', function () {
     return view('salesman-create-lead');
 });
 
-
+Route::post    ('/leads/{lead}/qualities', 'LeadController@store_qualities')->name("lead.qualities.store");
 Route::resource('/leads', 'LeadController');
 
 Route::resource('/setup-system', 'SetupController');
+
+Route::resource('/budgets', 'BudgetController');
+
+Route::resource('/negotiations', 'NegotiationController');
+
+Route::resource('/closings', 'ClosingController');
+
+Route::resource('/qualities', 'QualityCriteriaController');
 
 Route::get('/view-lead', function () {
     return view('view-lead');
@@ -75,10 +83,6 @@ Route::get('/view-lead-salesman', function () {
 
 Route::get('/view-new-leads', function () {
     return view('view-new-leads');
-});
-
-Route::get('/lead', function () {
-    return view('lead');
 });
 
 Route::get('/stats', function () {

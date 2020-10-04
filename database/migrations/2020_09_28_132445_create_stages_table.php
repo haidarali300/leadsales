@@ -15,9 +15,6 @@ class CreateStagesTable extends Migration
     {
         Schema::create('stages', function (Blueprint $table) {
             $table->id();
-            $table->boolean('active')->default(1);
-            $table->boolean('required');
-            $table->integer('order');
             $table->string('name');
 
             $table->timestamps();

@@ -2,15 +2,14 @@
 
 namespace App\Models;
 
-use App\Models\StageField;
 use Illuminate\Database\Eloquent\Model;
 
-class Stage extends Model
+class QualityCriteria extends Model
 {
-    protected $table = 'stages';
+    protected $table = 'quality_criterias';
 
     protected $fillable = [
+        'active',
         'name'
     ];
-    
 }

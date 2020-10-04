@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CreateOriginsTable extends Migration
+class CreateBudgetsTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,10 +13,11 @@ class CreateOriginsTable extends Migration
      */
     public function up()
     {
-        Schema::create('origins', function (Blueprint $table) {
+        Schema::create('budgets', function (Blueprint $table) {
             $table->id();
-            $table->string('name');
+            $table->string('number', 127);
             $table->text('description');
+            $table->string('image', 127);
             $table->timestamps();
         });
     }
@@ -28,6 +29,6 @@ class CreateOriginsTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('origins');
+        Schema::dropIfExists('budgets');
     }
 }

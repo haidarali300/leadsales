@@ -7,7 +7,7 @@
     <title>LeadSalesManager</title>
     <!-- Bootstrap CSS -->
     <link rel="icon"   href="{{ asset('images/login.png') }}" type="image/png" />
-    <link rel="stylesheet" type="text/css" href="{{ asset('css/bootstrap.min.css') }}">
+    <link rel="stylesheet" type="text/css" href="{{ asset('css/bootstrap.css') }}">
     <link rel="stylesheet" type="text/css" href="{{ asset('css/css-custom.css') }}">
     @yield('link-extra')
   </head>
@@ -76,7 +76,7 @@
     <script> @guest window.sessionStorage.removeItem('api_token'); @else window.sessionStorage.setItem('api_token', '{{auth()->user()->api_token}}'); @endauth </script>
     <script type="text/javascript" src="{{asset('js/jquery-3.5.1.min.js')}}"></script>
     <script type="text/javascript" src="{{asset('js/popper.min.js')}}"></script>
-    <script type="text/javascript" src="{{asset('js/bootstrap.min.js')}}"></script>
+    <script type="text/javascript" src="{{asset('js/bootstrap.js')}}"></script>
     @yield('js-extra')
   </body>
 </html>

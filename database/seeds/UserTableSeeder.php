@@ -34,5 +34,7 @@ class UserTableSeeder extends Seeder
         ]);
 
         $admin->assignRole(['admin']);
+        $supervisor->assignRole(['supervisor']);
+        $salesman->assignRole(['salesman']);
     }
 }

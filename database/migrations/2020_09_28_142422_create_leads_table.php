@@ -20,8 +20,12 @@ class CreateLeadsTable extends Migration
             $table->unsignedBigInteger('supervisor_id');
             $table->unsignedBigInteger('category_id');
             $table->unsignedBigInteger('origin_id');
+            $table->unsignedBigInteger('lead_state_id');
+            $table->unsignedBigInteger('stage_id');
+            $table->unsignedBigInteger('budget_id')->nullable();
+            $table->unsignedBigInteger('negotiation_id')->nullable();
+            $table->unsignedBigInteger('closing_id')->nullable();
             $table->text('description');
-            $table->integer('state')->default(0); // 0: active, 1: lost, 2: closed
             $table->timestamps();
 
             $table->foreign('client_id')->references('id')->on('clients')
@@ -33,6 +37,10 @@ class CreateLeadsTable extends Migration
             $table->foreign('salesman_id')->references('id')->on('users')
                   ->onDelete('cascade')->onUpdate('cascade');
             $table->foreign('supervisor_id')->references('id')->on('users')
+                  ->onDelete('cascade')->onUpdate('cascade');
+            $table->foreign('lead_state_id')->references('id')->on('lead_states')
+                  ->onDelete('cascade')->onUpdate('cascade');
+            $table->foreign('stage_id')->references('id')->on('stages')
                   ->onDelete('cascade')->onUpdate('cascade');
         });
     }

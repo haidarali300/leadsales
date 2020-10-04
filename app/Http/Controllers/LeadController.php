@@ -6,6 +6,10 @@ use App\Models\User;
 use App\Models\Category;
 use App\Models\Origin;
 use App\Models\Lead;
+use App\Models\Stage;
+use App\Models\Client;
+use App\Models\LeadState;
+use App\Models\QualityCriteria;
 use Illuminate\Http\Request;
 
 class LeadController extends Controller
@@ -17,7 +21,15 @@ class LeadController extends Controller
      */
     public function index()
     {
-        return view('view-lead');
+        $active = Lead::where('lead_state_id', 1)->get();
+        $lost = Lead::where('lead_state_id', 2)->get();
+        $closed = Lead::where('lead_state_id', 3)->get();
+
+        return view('view-lead', [
+            'active' => $active,
+            'lost' => $lost,
+            'closed' => $closed
+        ]);
     }
 
     /**
@@ -48,20 +60,64 @@ class LeadController extends Controller
      */
     public function store(Request $request)
     {
+        $stage = Stage::where('name', 'contact')->first();
+        $lead_state = LeadState::where('name', 'active')->first();
+
         $input = $request->all();
+        $input['role'] = 'client';
+        
+        $client = Client::create($input);
+
+        $input['stage_id'] = $stage->id;
+        $input['client_id'] = $client->id;
+        $input['lead_state_id'] = $lead_state->id;
+
         $lead = Lead::create($input);
-        dd($lead);
+        return redirect()->route('leads.index');
     }
 
     /**
      * Display the specified resource.
      *
-     * @param  int  $id
+     * @param  Lead  $lead
      * @return \Illuminate\Http\Response
      */
-    public function show($id)
+    public function show(Lead $lead)
     {
-        //
+        $categories = Category::all();
+        $origins = Origin::all();
+        $supervisors = User::role('supervisor')->get();
+        $salesmen = User::role('salesman')->get();
+        $qualityCriterias = QualityCriteria::where('active', 1)->get();
+
+        return view('lead', [
+            'lead' => $lead,
+            'categories' => $categories,
+            'origins' => $origins,
+            'supervisors' => $supervisors,
+            'salesmen' => $salesmen,
+            'qualityCriterias' => $qualityCriterias
+        ]);
+    }
+
+    /**
+     * 
+     * 
+     */
+    public function store_qualities(Request $request, Lead $lead)
+    {
+        $input = $request->except('_token');
+        $previousUrl = strtok(url()->previous(), '?');
+
+        $sync_data = [];
+        foreach ($input as $key => $value)
+            $sync_data[$key] = ['rate' => $value];
+
+        $lead->qualityCriterias()->sync($sync_data);
+        $lead->stage_id = 5;
+        $lead->save();
+
+        return redirect()->to($previousUrl . '?' . http_build_query(['show_stage' => 4]));
     }
 
     /**

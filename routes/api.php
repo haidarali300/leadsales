@@ -17,5 +17,6 @@ use Illuminate\Support\Facades\Route;
 Route::group(['middleware' => ['json.response']], function() {
     Route::group(['middleware' => ['auth:api', 'role:admin']], function() {
         Route::post('/user/create/client', 'API\UserAPIController@client');
+        Route::put ('/user/client/{id}', 'API\UserAPIController@update');
     });
 });

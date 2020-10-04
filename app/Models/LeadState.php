@@ -2,15 +2,14 @@
 
 namespace App\Models;
 
-use App\Models\StageField;
 use Illuminate\Database\Eloquent\Model;
 
-class Stage extends Model
+class LeadState extends Model
 {
-    protected $table = 'stages';
+    protected $table = 'lead_states';
 
     protected $fillable = [
-        'name'
+        'name',
+        'description'
     ];
-    
 }

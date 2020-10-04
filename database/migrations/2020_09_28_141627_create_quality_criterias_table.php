@@ -17,9 +17,6 @@ class CreateQualityCriteriasTable extends Migration
             $table->id();
             $table->boolean('active')->default(1);
             $table->string('name');
-            /*$table->integer('product_quality');
-            $table->integer('product_arrival');
-            $table->integer('ressponse_time');*/
             $table->timestamps();
         });
     }

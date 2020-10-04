@@ -9,6 +9,7 @@ class Origin extends Model
     protected $table = 'origins';
 
     protected $fillable = [
-        'name'
+        'name',
+        'description'
     ];
 }

@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CreateStageFieldsTable extends Migration
+class CreateClosingsTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,15 +13,13 @@ class CreateStageFieldsTable extends Migration
      */
     public function up()
     {
-        Schema::create('stage_fields', function (Blueprint $table) {
+        Schema::create('closings', function (Blueprint $table) {
             $table->id();
-            $table->unsignedBigInteger('stage_id');
-            $table->string('name');
-            $table->string('type');
+            $table->string('invoice_number', 127);
+            $table->string('guide_number', 127);
+            $table->string('invoice_image', 127);
+            $table->string('guide_image', 127);
             $table->timestamps();
-
-            $table->foreign('stage_id')->references('id')->on('stages')
-                  ->onDelete('cascade')->onUpdate('cascade');
         });
     }
 
@@ -32,6 +30,6 @@ class CreateStageFieldsTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('stage_fields');
+        Schema::dropIfExists('closings');
     }
 }
