@@ -2,12 +2,10 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\Category;
 use App\Models\Origin;
-use App\Models\QualityCriteria;
 use Illuminate\Http\Request;
 
-class SetupController extends Controller
+class OriginController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -16,15 +14,7 @@ class SetupController extends Controller
      */
     public function index()
     {
-        $categories = Category::all();
-        $origins = Origin::all();
-        $criterias  = QualityCriteria::all();
-
-        return view('setup-system', [
-            'categories' => $categories,
-            'criterias' => $criterias,
-            'origins' => $origins
-        ]);
+        //
     }
 
     /**
@@ -45,7 +35,9 @@ class SetupController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $input = $request->all();
+        $origin = Origin::create($input);
+        return redirect()->route('setup.index');
     }
 
     /**
@@ -74,12 +66,14 @@ class SetupController extends Controller
      * Update the specified resource in storage.
      *
      * @param  \Illuminate\Http\Request  $request
-     * @param  int  $id
+     * @param  Origin $origin
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, $id)
+    public function update(Request $request, Origin $origin)
     {
-        //
+        $origin->active = ($request->has('active')) ? 1 : 0;
+        $origin->save();
+        return redirect()->route('setup.index');
     }
 
     /**

@@ -15,7 +15,8 @@ class CategoryTableSeeder extends Seeder
         for ($i=1; $i < 6; $i++) { 
             Category::create([
                 'name' => "Category $i",
-                'description' => "vague description $i"
+                'description' => "vague description $i",
+                'active' => 1
             ]);
         }
     }

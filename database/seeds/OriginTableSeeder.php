@@ -12,8 +12,8 @@ class OriginTableSeeder extends Seeder
      */
     public function run()
     {
-        Origin::create(['name' => "Facebook", 'description' => "facebook"]);
-        Origin::create(['name' => "Instagram", 'description' => "instagram"]);
-        Origin::create(['name' => "Google Ads", 'description' => "google ads"]);
+        Origin::create(['name' => "Facebook", 'description' => "facebook", 'active' => 1]);
+        Origin::create(['name' => "Instagram", 'description' => "instagram", 'active' => 1]);
+        Origin::create(['name' => "Google Ads", 'description' => "google ads", 'active' => 1]);
     }
 }

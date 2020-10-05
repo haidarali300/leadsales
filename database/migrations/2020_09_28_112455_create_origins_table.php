@@ -17,6 +17,7 @@ class CreateOriginsTable extends Migration
             $table->id();
             $table->string('name');
             $table->text('description');
+            $table->boolean('active')->default(1);
             $table->timestamps();
         });
     }

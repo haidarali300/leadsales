@@ -35,9 +35,11 @@ Route::middleware(['auth'])->group(function() {
 Route::post    ('/leads/{lead}/qualities', 'LeadController@store_qualities')->name("lead.qualities.store");
 Route::get     ('/leads/new', 'LeadController@new')->name('leads.new');
 Route::resource('/leads', 'LeadController');
-Route::resource('/setup-system', 'SetupController');
+Route::resource('/setup', 'SetupController');
 Route::resource('/budgets', 'BudgetController');
 Route::resource('/negotiations', 'NegotiationController');
 Route::resource('/closings', 'ClosingController');
 Route::resource('/qualities', 'QualityCriteriaController');
 Route::resource('/stats', 'StatController');
+Route::resource('/origins', 'OriginController');
+Route::resource('/categories', 'CategoryController');

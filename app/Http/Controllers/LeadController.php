@@ -71,7 +71,7 @@ class LeadController extends Controller
     {
         $supervisors = User::role('supervisor')->get();
         $salesmen = User::role('salesman')->get();
-        $categories = Category::all();
+        $categories = Category::where('active', 1)->get();
         $origins = Origin::all();
         
         return view('create-lead', [
@@ -115,7 +115,7 @@ class LeadController extends Controller
      */
     public function show(Lead $lead)
     {
-        $categories = Category::all();
+        $categories = Category::where('active', 1)->get();
         $origins = Origin::all();
         $supervisors = User::role('supervisor')->get();
         $salesmen = User::role('salesman')->get();

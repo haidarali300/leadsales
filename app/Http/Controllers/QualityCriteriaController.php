@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\QualityCriteria;
 use Illuminate\Http\Request;
 
 class QualityCriteriaController extends Controller
@@ -34,7 +35,9 @@ class QualityCriteriaController extends Controller
      */
     public function store(Request $request)
     {
-        dd($request->all());
+        $input = $request->all();
+        $criteria = QualityCriteria::create($input);
+        return redirect()->route('setup.index');
     }
 
     /**
@@ -68,7 +71,10 @@ class QualityCriteriaController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+        $criteria = QualityCriteria::find($id);
+        $criteria->active = ($request->has('active')) ? 1 : 0;
+        $criteria->save();
+        return redirect()->route('setup.index');
     }
 
     /**

@@ -11,8 +11,8 @@
 				<a class="btn btn-color btn-menu ml-2" href="{{route('users.index')}}" role="button" data-toggle="tooltip" data-placement="right" title="Clients, Salesmen, Supervisors, Admins">Manage Users</a>
 			</div>
 			<div class="col-12 mt-3 text-center">
-				<a class="btn btn-color btn-menu mr-6" href="{{url('stats')}}" role="button" data-toggle="tooltip" data-placement="left" title="View Report, View Graphs, Generate Reports, Generate Graphs"> Stats</a>	
-				<a class="btn btn-color btn-menu ml-6" href="{{url('setup-system')}}" role="button" data-toggle="tooltip" data-placement="right" title="Sep Stages, Set Criterias">Setup System</a>
+				<a class="btn btn-color btn-menu mr-6" href="{{route('stats.index')}}" role="button" data-toggle="tooltip" data-placement="left" title="View Report, View Graphs, Generate Reports, Generate Graphs"> Stats</a>	
+				<a class="btn btn-color btn-menu ml-6" href="{{route('setup.index')}}" role="button" data-toggle="tooltip" data-placement="right" title="Sep Stages, Set Criterias">Setup System</a>
 			</div>
 		</div>
 	</div><br><br><br><br>
