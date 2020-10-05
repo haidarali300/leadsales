@@ -6,31 +6,7 @@
 
 @section('js-extra')
 	<script src="{{asset('js/intlTelInput.js')}}"></script>
-	<script>
-		const input = document.querySelector("#phone");
-		iti = intlTelInput(input, {
-			separateDialCode: true,
-			utilsScript: "/js/utils.js",
-			initialCountry: "us",
-			autoPlaceholder: "aggressive",
-			formatOnDisplay: true,
-			onlyCountries: ["us"],
-			hiddenInput: "phone"
-		});
-		const setCountryData = () => {
-			let selected_country = iti.getSelectedCountryData();
-			document.getElementById("country").value = selected_country.name;
-			document.getElementById("country-iso2").value = selected_country.iso2;
-		}
-		input.addEventListener("keyup", () => {
-			if (!iti.isValidNumber())
-				$("#phone").addClass("form-control-invalid")
-			else
-				$("#phone").removeClass("form-control-invalid")
-		});
-		input.addEventListener("countrychange", () => setCountryData());
-		window.addEventListener('submit', () => setCountryData());
-	</script>
+	<script src="{{asset('js/fn/create_user.js')}}"></script>
 @endsection
 
 @section('ref-header')
@@ -49,11 +25,9 @@
 					@csrf
 					@if(isset($user)) <input type="hidden" name="_method" value="PUT"> @endif
 					<div class="row">
-						<div class="col-6">
-							<input type="text" class="form-control" placeholder="Last Name" name="lastname" value="@if(isset($user) && isset($user['lastname'])){{$user['lastname']}}@endif" required>
-						</div>
-						<div class="col-6">
-							<input type="text" class="form-control" placeholder="Name" name="name" value="@if(isset($user) && isset($user['name'])){{$user['name']}}@endif" required>
+						<legend class="col-form-label col-sm-2 pt-0">Full name:</legend>
+						<div class="col-10">
+							<input type="text" class="form-control" placeholder="Full Name" name="name" value="@if(isset($user) && isset($user['name'])){{$user['name']}}@endif" required>
 						</div>
 					    <fieldset class="form-group col-6 mt-3">
 						    <div class="row">
@@ -99,10 +73,7 @@
 									<input readonly type="text" value="United States" class="form-control" name="country" value="@if(isset($user) && isset($user['country'])){{$user['country']}}@endif" id="country">
 						        </div>
 						        <div class="form-group">
-									<input type="text" class="form-control" placeholder="State" name="state" value="@if(isset($user) && isset($user['state'])){{$user['state']}}@endif" required>
-						        </div>
-						        <div class="form-group">
-						          	<input type="text" class="form-control" placeholder="City" name="city" value="@if(isset($user) && isset($user['city'])){{$user['city']}}@endif" required>
+									<input type="text" class="form-control" placeholder="Address" name="address" value="@if(isset($user) && isset($user['address'])){{$user['address']}}@endif" required>
 						        </div>
 						      </div>
 						    </div>

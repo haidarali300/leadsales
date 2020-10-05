@@ -53,7 +53,6 @@ class UserController extends Controller
     {
         $input = $request->all();
         $input['role'] = $role;
-        $input['name'] = $input['name'] . " " . $input['lastname'];
         $input['password']  = isset($input['password']) ? Hash::make($input['password']) : null;
         $input['api_token'] = Str::random(60);
 
@@ -117,18 +116,14 @@ class UserController extends Controller
         }
 
         if ($user) {
-            $names = explode(" ", $user->name);
-
             $input = [
                 'id' => $user->id,
-                'lastname' => (count($names) > 1) ? $names[1] : null,
-                'name' => $names[0],
+                'name' => $user->name,
                 'email' => $user->email,
                 'password' => $user->password,
                 'phone' => ($user->client) ? $user->client->phone : $user->phone,
                 'country' => ($user->client) ? $user->client->country : $user->country,
-                'state' => ($user->client) ? $user->client->state : $user->state,
-                'city' => ($user->client) ? $user->client->city : $user->city
+                'address' => ($user->client) ? $user->client->address : $user->address
             ];
         } else {
             return redirect()->route('users.index')->with(['message' => 'failed']);
@@ -153,7 +148,6 @@ class UserController extends Controller
     {
         $input = $request->all();
         $input['role'] = $role;
-        $input['name'] = $input['name'] . " " . $input['lastname'];
         $input['password']  = isset($input['password']) ? Hash::make($input['password']) : null;
         
         switch ($role) {
