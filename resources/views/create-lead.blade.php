@@ -96,7 +96,7 @@
 				  </div>
 				</div>
  			</div>
-
+			@if(auth()->user()->hasRole('admin'))
  			<!--Card Assign-->
  			<div class="col-4">
  				<h6 class="ml-4">Assign</h6>
@@ -132,6 +132,11 @@
 				</div>
 				<button class="btn btn-color btn-create-lead my-3" type="submit" role="button">Create</button>
  			</div>
+			@else
+			<div class="col-4">
+				<button class="btn btn-color btn-create-lead my-3" type="submit" role="button">Create</button>
+			</div>
+			@endif
  		</div>
 		</form>
  	</main>

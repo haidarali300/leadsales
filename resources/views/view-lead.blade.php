@@ -1,7 +1,7 @@
 @extends('layouts.index')
 
 @section('ref-header')
-	href="{{url('admin-menu')}}" 
+	href="{{route('home')}}"
 @endsection
 
 
@@ -45,7 +45,7 @@
 							    <div class="d-flex justify-content-between">
 							   	  <div class="p-2 bd-highlight">{{$lead->client->name}}</div>
 								  <div class="p-2 bd-highlight">{{$lead->salesman->name}}</div>
-								  <div class="p-2 bd-highlight">{{$lead->supervisor->name}}</div>
+								  <div class="p-2 bd-highlight">{{($lead->supervisor) ? $lead->supervisor->name : 'Supervisor: Not assigned'}}</div>
 								  <div class="p-2 bd-highlight mt-n1">
 								  	<a class="btn btn-dot" href="{{route('leads.show', ['lead' => $lead->id])}}" role="button">
 								  		<svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-dots" width="34" height="34" viewBox="0 0 24 24" stroke-width="1.5" stroke="#000000" fill="none" stroke-linecap="round" stroke-linejoin="round">
@@ -108,7 +108,7 @@
 							    <div class="d-flex justify-content-between">
 								  <div class="p-2 bd-highlight">{{$lead->client->name}}</div>
 								  <div class="p-2 bd-highlight">{{$lead->salesman->name}}</div>
-								  <div class="p-2 bd-highlight">{{$lead->supervisor->name}}</div>
+								  <div class="p-2 bd-highlight">{{($lead->supervisor) ? $lead->supervisor->name : 'Supervisor: Not assigned'}}</div>
 								  <div class="p-2 bd-highlight mt-n1">
 								  	<a class="btn btn-dot" href="{{route('leads.show', ['lead' => $lead->id])}}" role="button">
 								  		<svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-dots" width="34" height="34" viewBox="0 0 24 24" stroke-width="1.5" stroke="#000000" fill="none" stroke-linecap="round" stroke-linejoin="round">
@@ -171,7 +171,7 @@
 							    <div class="d-flex justify-content-between">
 								  <div class="p-2 bd-highlight">{{$lead->client->name}}</div>
 								  <div class="p-2 bd-highlight">{{$lead->salesman->name}}</div>
-								  <div class="p-2 bd-highlight">{{$lead->supervisor->name}}</div>
+								  <div class="p-2 bd-highlight">{{($lead->supervisor) ? $lead->supervisor->name : 'Supervisor: Not assigned'}}</div>
 								  <div class="p-2 bd-highlight mt-n1">
 								  	<a class="btn btn-dot" href="{{route('leads.show', ['lead' => $lead->id])}}" role="button">
 								  		<svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-dots" width="34" height="34" viewBox="0 0 24 24" stroke-width="1.5" stroke="#000000" fill="none" stroke-linecap="round" stroke-linejoin="round">

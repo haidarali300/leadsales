@@ -19,7 +19,7 @@ window.addEventListener('load', () => {
         autoPlaceholder: "aggressive",
         formatOnDisplay: true,
         onlyCountries: ["us", "gb"],
-        hiddenInput: "phone"
+        //hiddenInput: "phone"
     });
 
     input.addEventListener("keyup", () => {
@@ -37,6 +37,8 @@ $("#lead").submit((event) => {
     let self = $("#lead");
     event.preventDefault();
 
+    document.getElementById("phone").value = iti.getNumber();
+
     let data = {
         name    : document.getElementById("fullname").value,
         country : document.getElementById("country").value,
@@ -46,8 +48,8 @@ $("#lead").submit((event) => {
         description : document.getElementById("description").value,
         category: document.getElementById("category").value,
         origin  : document.getElementById("origin").value,
-        salesman: document.getElementById("salesman").value,
-        supervisor: document.getElementById("supervisor").value
+        salesman: (document.getElementById("salesman")) ? document.getElementById("salesman").value : 'salesman',
+        supervisor: (document.getElementById("supervisor")) ? document.getElementById("supervisor").value : 'supervisor'
     };
 
     let missing_fields = Object.keys(data).map((key,index) => {

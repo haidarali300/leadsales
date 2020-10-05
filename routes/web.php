@@ -17,28 +17,8 @@ Route::get ('/login', 'Auth\LoginController@showLoginForm')->name('login');
 Route::post('/login', 'Auth\LoginController@login');
 Route::post('/logout', 'Auth\LoginController@logout')->name('logout');
 
+Route::get('/', 'HomeController@index');
 Route::get('/home', 'HomeController@index')->name('home');
-
-
-Route::get('/index', function () {
-    return view('login');
-});
-
-Route::get('/', function () {
-    return view('login');
-});
-
-Route::get('/admin-menu', function () {
-    return view('admin-menu');
-});
-
-Route::get('/salesman-menu', function () {
-    return view('salesman-menu');
-});
-
-Route::get('/supervisor-menu', function () {
-    return view('supervisor-menu');
-});
 
 Route::middleware(['auth'])->group(function() {
     Route::prefix('/users')->group(function() {
@@ -52,38 +32,14 @@ Route::middleware(['auth'])->group(function() {
     });
 });
 
-Route::get('/salesman-create-lead', function () {
-    return view('salesman-create-lead');
-});
-
 Route::post    ('/leads/{lead}/qualities', 'LeadController@store_qualities')->name("lead.qualities.store");
+Route::get     ('/leads/new', 'LeadController@new')->name('leads.new');
 Route::resource('/leads', 'LeadController');
-
 Route::resource('/setup-system', 'SetupController');
-
 Route::resource('/budgets', 'BudgetController');
-
 Route::resource('/negotiations', 'NegotiationController');
-
 Route::resource('/closings', 'ClosingController');
-
 Route::resource('/qualities', 'QualityCriteriaController');
-
-Route::get('/view-lead', function () {
-    return view('view-lead');
-});
-
-Route::get('/view-lead-sup', function () {
-    return view('view-lead-sup');
-});
-
-Route::get('/view-lead-salesman', function () {
-    return view('view-lead-salesman');
-});
-
-Route::get('/view-new-leads', function () {
-    return view('view-new-leads');
-});
 
 Route::get('/stats', function () {
     return view('stats');

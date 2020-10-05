@@ -11,6 +11,7 @@ use App\Models\Client;
 use App\Models\LeadState;
 use App\Models\QualityCriteria;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 
 class LeadController extends Controller
 {
@@ -21,14 +22,43 @@ class LeadController extends Controller
      */
     public function index()
     {
-        $active = Lead::where('lead_state_id', 1)->get();
-        $lost = Lead::where('lead_state_id', 2)->get();
-        $closed = Lead::where('lead_state_id', 3)->get();
+        $user = Auth::user();
+        $active = Lead::where('lead_state_id', 1)
+                        ->when($user->hasRole('salesman'), function($q) use ($user) {
+                            return $q->where('salesman_id', $user->id);
+                        })
+                        ->when($user->hasRole('supervisor'), function($q) use ($user) {
+                            return $q->where('supervisor_id', $user->id);
+                        })->get();
+        $lost = Lead::where('lead_state_id', 2)
+                        ->when($user->hasRole('salesman'), function($q) use ($user) {
+                            return $q->where('salesman_id', $user->id);
+                        })->when($user->hasRole('supervisor'), function($q) use ($user) {
+                            return $q->where('supervisor_id', $user->id);
+                        })->get();
+        $closed = Lead::where('lead_state_id', 3)
+                        ->when($user->hasRole('salesman'), function($q) use ($user) {
+                            return $q->where('salesman_id', $user->id);
+                        })->when($user->hasRole('supervisor'), function($q) use ($user) {
+                            return $q->where('supervisor_id', $user->id);
+                        })->get();
 
         return view('view-lead', [
             'active' => $active,
             'lost' => $lost,
             'closed' => $closed
+        ]);
+    }
+
+    public function new()
+    {
+        $user = Auth::user();
+        $leads = Lead::where('salesman_id', $user->id)
+                     ->where('stage_id', 1)
+                     ->get();
+
+        return view('view-new-leads', [
+            'leads' => $leads
         ]);
     }
 
@@ -65,7 +95,8 @@ class LeadController extends Controller
 
         $input = $request->all();
         $input['role'] = 'client';
-        
+        $input['salesman_id'] = (isset($input['salesman_id'])) ? $input['salesman_id'] : Auth::id();
+
         $client = Client::create($input);
 
         $input['stage_id'] = $stage->id;

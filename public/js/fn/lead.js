@@ -39,18 +39,3 @@ window.addEventListener('load', () => {
     input.addEventListener("countrychange", () => setCountryData());
     window.addEventListener('submit', () => setCountryData());
 });
-
-const update_user = () => {
-    let token = window.sessionStorage.getItem('api_token');
-
-    let data = {
-        name    : document.getElementById("fullname").value,
-        country : document.getElementById("country").value,
-        state   : document.getElementById("state").value,
-        city    : document.getElementById("city").value,
-        email   : document.getElementById("email").value,
-        phone   : iti.getNumber()
-    };
-
-    
-}

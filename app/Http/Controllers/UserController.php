@@ -171,6 +171,9 @@ class UserController extends Controller
             return redirect()->route('users.index')->with(['message' => 'failed']);
         }
         
+        if (strpos(url()->previous(), 'lead') !== false)
+            return redirect()->to(strtok(url()->previous(), '?'));
+
         return redirect()->route('users.index')->with(['message' => 'success']);
     }
 
