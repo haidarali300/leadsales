@@ -40,7 +40,4 @@ Route::resource('/budgets', 'BudgetController');
 Route::resource('/negotiations', 'NegotiationController');
 Route::resource('/closings', 'ClosingController');
 Route::resource('/qualities', 'QualityCriteriaController');
-
-Route::get('/stats', function () {
-    return view('stats');
-});
+Route::resource('/stats', 'StatController');

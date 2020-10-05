@@ -7,6 +7,8 @@ use Illuminate\Foundation\Auth\User as Authenticatable;
 use Illuminate\Notifications\Notifiable;
 use Spatie\Permission\Traits\HasRoles;
 use App\Models\Client;
+use App\Models\Lead;
+use App\Models\LeadState;
 
 class User extends Authenticatable
 {
@@ -45,5 +47,37 @@ class User extends Authenticatable
     public function client()
     {
         return $this->belongsTo(Client::class, 'client_id');
+    }
+
+    public function leads()
+    {
+        return $this->hasMany(Lead::class, 'salesman_id', 'id');
+    }
+
+    public function getLeadAssignedAttribute()
+    {
+        return Lead::where('salesman_id', $this->id)
+                   ->count();
+    }
+
+    public function getLeadActiveAttribute()
+    {
+        return Lead::where('salesman_id', $this->id)
+                   ->where('lead_state_id', LeadState::where('name', 'Active')->first()->id)
+                   ->count();
+    }
+
+    public function getLeadClosedAttribute()
+    {
+        return Lead::where('salesman_id', $this->id)
+                   ->where('lead_state_id', LeadState::where('name', 'Closed')->first()->id)
+                   ->count();
+    }
+
+    public function getLeadLostAttribute()
+    {
+        return Lead::where('salesman_id', $this->id)
+                   ->where('lead_state_id', LeadState::where('name', 'Lost')->first()->id)
+                   ->count();
     }
 }
