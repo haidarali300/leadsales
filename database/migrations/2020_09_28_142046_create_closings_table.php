@@ -19,6 +19,7 @@ class CreateClosingsTable extends Migration
             $table->string('guide_number', 127);
             $table->string('invoice_image', 127);
             $table->string('guide_image', 127);
+            $table->double('income');
             $table->timestamps();
         });
     }

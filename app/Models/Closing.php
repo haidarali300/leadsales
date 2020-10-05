@@ -12,6 +12,7 @@ class Closing extends Model
         'invoice_number',
         'guide_number',
         'invoice_image',
-        'guide_image'
+        'guide_image',
+        'income'
     ];
 }
