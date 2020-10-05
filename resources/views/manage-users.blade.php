@@ -1,9 +1,5 @@
 @extends('layouts.index')
 
-@section('ref-header')
-	href="{{url('admin-menu')}}" 
-@endsection
-
 @section('content')
 	@php $p = ['b','c','d','e','f','g','h']; @endphp
  	<main class="">

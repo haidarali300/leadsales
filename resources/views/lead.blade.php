@@ -7,10 +7,6 @@
 <link rel="stylesheet" href="{{asset('css/sweetalert2.min.css')}}">
 @endsection
 
-@section('ref-header')
-	href="{{route('home')}}" 
-@endsection
-
 @section('content')
  	<main class="">
  		<div class="container my-4 ">

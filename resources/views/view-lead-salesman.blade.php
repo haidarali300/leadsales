@@ -1,9 +1,5 @@
 @extends('layouts.index')
 
-@section('ref-header')
-	href="{{url('salesman-menu')}}" 
-@endsection
-
 @section('link-extra')
 <script src="https://use.fontawesome.com/c47bc38e87.js"></script>
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">

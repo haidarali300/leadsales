@@ -1,9 +1,5 @@
 @extends('layouts.index')
 
-@section('ref-header')
-	href="{{url('salesman-menu')}}" 
-@endsection
-
 @section('content')
  	<main class="">
  		<div class="mt-2 mb-4 ml-3">

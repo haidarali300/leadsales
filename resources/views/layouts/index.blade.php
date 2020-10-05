@@ -15,7 +15,7 @@
   <body>
     <header>
         <nav class="navbar navbar-light bg-light">
-          <a @yield('ref-header') class="navbar-brand" >
+          <a href="{{route('home')}}" class="navbar-brand" >
             <img src="{{asset('images/lo.png')}}" alt="" loading="lazy" style="height: 50px; width: auto;">
           </a>
           @guest

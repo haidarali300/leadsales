@@ -1,9 +1,5 @@
 @extends('layouts.index')
 
-@section('ref-header')
-	href="{{url('admin-menu')}}" 
-@endsection
-
 @section('js-extra')
 <script>
 	
