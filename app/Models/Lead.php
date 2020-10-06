@@ -19,7 +19,8 @@ class Lead extends Model
         'stage_id',
         'budget_id',
         'negotiation_id',
-        'closing_id'
+        'closing_id',
+        'image'
     ];
 
     public function client()

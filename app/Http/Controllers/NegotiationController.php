@@ -43,6 +43,8 @@ class NegotiationController extends Controller
         if (empty($lead))
             return redirect()->to($previousUrl . '?' . http_build_query(['show_stage' => $lead->stage_id]));
 
+        $path = $request->file('image')->store('negotiations');
+        $input['image'] = "storage/" . $path;
         $negotiation = Negotiation::create($input);
         $lead->negotiation_id = $negotiation->id;
         $lead->stage_id = 3;
@@ -87,6 +89,11 @@ class NegotiationController extends Controller
         $lead = Lead::find($input['lead_id']);
         $negotiation = Negotiation::find($id);
         
+        if ($request->has('image')) {
+            $path = $request->file('image')->store('negotiations');
+            $input['image'] = "storage/" . $path;
+        }
+
         if (empty($lead) || empty($negotiation))
             return redirect()->to($previousUrl . '?' . http_build_query(['show_stage' => $lead->stage_id]));
         

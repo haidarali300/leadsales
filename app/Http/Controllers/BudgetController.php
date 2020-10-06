@@ -43,6 +43,8 @@ class BudgetController extends Controller
         if (empty($lead))
             return redirect()->to($previousUrl . '?' . http_build_query(['show_stage' => $lead->stage_id]));
 
+        $path = $request->file('image')->store('budgets');
+        $input['image'] = "storage/" . $path;
         $budget = Budget::create($input);
         $lead->budget_id = $budget->id;
         $lead->stage_id = 2;
@@ -86,6 +88,11 @@ class BudgetController extends Controller
         $previousUrl = strtok(url()->previous(), '?');
         $lead = Lead::find($input['lead_id']);
         $budget = Budget::find($id);
+
+        if ($request->has('image')) {
+            $path = $request->file('image')->store('budgets');
+            $input['image'] = "storage/" . $path;
+        }
         
         if (empty($lead) || empty($budget))
             return redirect()->to($previousUrl . '?' . http_build_query(['show_stage' => $lead->stage_id]));

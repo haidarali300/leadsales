@@ -43,6 +43,10 @@ class ClosingController extends Controller
         if (empty($lead))
             return redirect()->to($previousUrl . '?' . http_build_query(['show_stage' => $lead->stage_id]));
 
+        $path = $request->file('invoice_image')->store('closings/invoices');
+        $input['invoice_image'] = "storage/" . $path;
+        $path = $request->file('guide_image')->store('closings/guides');
+        $input['guide_image'] = "storage/" . $path;
         $closing = Closing::create($input);
         $lead->closing_id = $closing->id;
         $lead->stage_id = 4;
@@ -86,6 +90,16 @@ class ClosingController extends Controller
         $previousUrl = strtok(url()->previous(), '?');
         $lead = Lead::find($input['lead_id']);
         $closing = Closing::find($id);
+
+        if ($request->has('invoice_image')) {
+            $path = $request->file('invoice_image')->store('closings/invoices');
+            $input['invoice_image'] = "storage/" . $path;
+        }
+        
+        if ($request->has('guide_image')) {
+            $path = $request->file('guide_image')->store('closings/guides');
+            $input['guide_image'] = "storage/" . $path;
+        }
         
         if (empty($lead) || empty($closing))
             return redirect()->to($previousUrl . '?' . http_build_query(['show_stage' => $lead->stage_id]));

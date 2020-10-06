@@ -26,6 +26,7 @@ class CreateLeadsTable extends Migration
             $table->unsignedBigInteger('negotiation_id')->nullable();
             $table->unsignedBigInteger('closing_id')->nullable();
             $table->text('description');
+            $table->string('image');
             $table->timestamps();
 
             $table->foreign('client_id')->references('id')->on('clients')

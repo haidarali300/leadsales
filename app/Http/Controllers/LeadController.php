@@ -96,7 +96,8 @@ class LeadController extends Controller
         $input = $request->all();
         $input['role'] = 'client';
         $input['salesman_id'] = (isset($input['salesman_id'])) ? $input['salesman_id'] : Auth::id();
-
+        $path = $request->file('image')->store('leads');
+        $input['image'] = "storage/" . $path;
         $client = Client::create($input);
 
         $input['stage_id'] = $stage->id;

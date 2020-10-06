@@ -39,3 +39,31 @@ window.addEventListener('load', () => {
     input.addEventListener("countrychange", () => setCountryData());
     window.addEventListener('submit', () => setCountryData());
 });
+
+const readURL = (input, image) => {
+    if (input.files && input.files[0]) {
+      var reader = new FileReader();
+      
+      reader.onload = function(e) {
+        $(image).attr('src', e.target.result);
+      }
+      
+      reader.readAsDataURL(input.files[0]);
+    }
+}
+
+$("#budget_image").change(function() {
+    readURL(this, "#budget_image_display");
+});
+
+$("#negotiation_image").change(function() {
+    readURL(this, "#negotiation_image_display");
+});
+
+$("#closing_invoice_image").change(function() {
+    readURL(this, "#closing_invoice_image_display");
+});
+
+$("#closing_guide_image").change(function() {
+    readURL(this, "#closing_guide_image_display");
+});

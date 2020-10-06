@@ -11,7 +11,7 @@
  		<div class="mt-2 mb-4 ml-3">
 			<h2>Create Lead</h2>
  		</div>
-		<form id="lead" action="{{route('leads.store')}}" method="POST">
+		<form id="lead" action="{{route('leads.store')}}" method="POST" enctype="multipart/form-data">
 		@csrf
  		<div class="row mx-1 mb-3">
  			<!--Card start a fresh lead-->
@@ -84,6 +84,9 @@
 									<div class="custom-file mb-3 col-11 ml-3">
 									    <input type="file" class="custom-file-input" id="image" name="image">
 									    <label class="custom-file-label" for="File">Choose file...</label>   
+									</div>
+									<div class="mb-3 col-12 ml-3">
+										<img src="" id="image_display" alt="" style="width:100%">
 									</div>
 				    			</div>
 				    		</div>

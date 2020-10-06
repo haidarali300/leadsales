@@ -17,7 +17,7 @@
 			      <div class="card">
 					  <div class="card-body">
 					    <h6 class="mb-4">Contact</h6>
-						<form method="POST" action="{{route('users.update', ['role' => 'client', 'user' => $lead->client->id])}}">
+						<form method="POST" action="{{route('users.update', ['role' => 'client', 'user' => $lead->client->id])}}" enctype="multipart/form-data">
 						@csrf
 						<input type="hidden" name="_method" value="PUT">
 						<input type="hidden" name="lead_id" value="{{$lead->id}}">
@@ -73,7 +73,7 @@
 									<div class="form-group col-12 mt-4">
 										<textarea class="form-control" id="addcoments" rows="3" placeholder="Additional coments">{{$lead->description}}</textarea>
 									</div>
-									<div class="form-group  mt-6 ml-3">
+									<div class="form-group  mt-1 ml-3">
 									<label for="samples" class="col-form-label">Samples: 
 										<svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-photo" width="24" height="24" viewBox="0 0 24 24" stroke-width="1.5" stroke="#000000" fill="none" stroke-linecap="round" stroke-linejoin="round">
 											<path stroke="none" d="M0 0h24v24H0z" fill="none"/>
@@ -82,6 +82,9 @@
 											<path d="M4 15l4 -4a3 5 0 0 1 3 0l5 5" />
 											<path d="M14 14l1 -1a3 5 0 0 1 3 0l2 2" />
 										</svg>
+										@if($lead->image)
+											<img src="{{asset($lead->image)}}" id="image_display" alt="" style="width:100%">
+										@endif
 									</label>
 									</div>
 								</div>
@@ -124,7 +127,7 @@
 			      <div class="card">
 					  <div class="card-body">
 					    <h6 class="mb-4">Budget</h6>
-						<form method="POST" action="@if($lead->budget_id){{route('budgets.update', ['budget' => $lead->budget_id])}}@else{{route('budgets.store')}}@endif">
+						<form method="POST" action="@if($lead->budget_id){{route('budgets.update', ['budget' => $lead->budget_id])}}@else{{route('budgets.store')}}@endif" enctype="multipart/form-data">
 							@csrf 
 							@if($lead->budget_id) <input type="hidden" name="_method" value="PUT"> @endif
 							<input type="hidden" name="lead_id" value="{{$lead->id}}">
@@ -137,13 +140,11 @@
 										</div>
 									</div>
 									<div class="custom-file mb-3 ">
-										<input type="file" class="custom-file-input" id="File" name="image">
-										<label class="custom-file-label" for="File">Choose file...</label>   
+										<input type="file" class="custom-file-input" id="budget_image" name="image">
+										<label class="custom-file-label" for="budget_image">Choose file...</label>   
 									</div>
 									<div>
-										@if($lead->budget_id)
-											<img src="{{asset('$lead->budget->image')}}" class="img-fluid" alt="">
-										@endif
+										<img src="@if($lead->budget_id){{asset($lead->budget->image)}}@endif" id="budget_image_display" class="img-fluid" alt="">
 									</div>
 					    		</div>
 					    		<div class="col-5">
@@ -174,7 +175,7 @@
 			      <div class="card">
 					  <div class="card-body">
 					    <h6 class="mb-4">Negotiation</h6>
-						<form method="POST" action="@if($lead->negotiation_id){{ route('negotiations.update', ['negotiation' => $lead->negotiation_id] )}}@else{{ route('negotiations.store') }}@endif">
+						<form method="POST" action="@if($lead->negotiation_id){{ route('negotiations.update', ['negotiation' => $lead->negotiation_id] )}}@else{{ route('negotiations.store') }}@endif" enctype="multipart/form-data">
 							@csrf 
 							@if($lead->negotiation_id) <input type="hidden" name="_method" value="PUT"> @endif
 							<input type="hidden" name="lead_id" value="{{$lead->id}}">
@@ -187,13 +188,11 @@
 										</div>
 									</div>
 									<div class="custom-file mb-3 ">
-										<input type="file" class="custom-file-input" id="File" name="image">
-										<label class="custom-file-label" for="File">Choose file...</label>   
+										<input type="file" class="custom-file-input" id="negotiation_image" name="image">
+										<label class="custom-file-label" for="negotiation_image">Choose file...</label>   
 									</div>
 									<div>
-										@if($lead->budget_id)
-											<img src="{{asset('$lead->negotiation->image')}}" class="img-fluid" alt="">
-										@endif
+										<img src="@if($lead->negotiation_id){{asset($lead->negotiation->image)}}@endif" id="negotiation_image_display" class="img-fluid" alt="">
 									</div>
 					    		</div>
 					    		<div class="col-5">
@@ -224,7 +223,7 @@
 			      <div class="card">
 					  <div class="card-body">
 					    <h6 class="mb-4">Closing</h6>
-						<form method="POST" action="@if($lead->closing_id){{ route('closings.update', ['closing' => $lead->closing_id] )}}@else{{ route('closings.store') }}@endif">
+						<form method="POST" action="@if($lead->closing_id){{ route('closings.update', ['closing' => $lead->closing_id] )}}@else{{ route('closings.store') }}@endif" enctype="multipart/form-data">
 							@csrf
 							@if($lead->closing_id) <input type="hidden" name="_method" value="PUT"> @endif
 							<input type="hidden" name="lead_id" value="{{$lead->id}}">
@@ -237,13 +236,11 @@
 										</div>
 									</div>
 									<div class="custom-file mb-3 ">
-										<input type="file" class="custom-file-input" id="File" name="invoice_image">
-										<label class="custom-file-label" for="File">Choose file...</label>   
+										<input type="file" class="custom-file-input" id="closing_invoice_image" name="invoice_image">
+										<label class="custom-file-label" for="closing_invoice_image">Choose file...</label>   
 									</div>
 									<div>
-										@if ($lead->closing_id)
-											<img src="{{$lead->closing->invoice_image}}" class="img-fluid" alt="">
-										@endif
+										<img src="@if ($lead->closing_id){{asset($lead->closing->invoice_image)}}@endif" id="closing_invoice_image_display" class="img-fluid" alt="">
 									</div>
 					    		</div>
 					    		<div class="col-6">
@@ -254,13 +251,11 @@
 										</div>
 									</div>
 									<div class="custom-file mb-3 ">
-										<input type="file" class="custom-file-input" id="File" name="guide_image">
-										<label class="custom-file-label" for="File">Choose file...</label> 
+										<input type="file" class="custom-file-input" id="closing_guide_image" name="guide_image">
+										<label class="custom-file-label" for="closing_guide_image">Choose file...</label> 
 									</div>
 									<div>
-										@if($lead->closing_id)
-											<img src="{{$lead->closing->guide_image}}" class="img-fluid" alt="">
-										@endif
+										<img src="@if($lead->closing_id){{asset($lead->closing->guide_image)}}@endif" id="closing_guide_image_display" class="img-fluid" alt="">
 									</div>
 								</div>
 								<label for="income" class="col-2 col-form-label">Income:</label>
