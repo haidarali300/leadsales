@@ -44,13 +44,23 @@ class StatController extends Controller
                                 })->count();
         $users            = User::role('salesman')->get();
 
+        $incomes          = Lead::select([DB::raw('SUM(closings.income) as incomes')])
+                                ->join('closings', 'closings.id', 'leads.closing_id')
+                                ->where('stage_id', 4)
+                                ->when($date_start && $date_end, function($q) use ($date_start, $date_end) {
+                                    return $q->whereBetween('leads.created_at', [$date_start, $date_end]);
+                                })
+                                ->first()
+                                ->incomes;
+
         return view('stats', [
             'number_of_leads' => $number_of_leads,
             'successful_leads' => $successful_leads,
             'lost_leads' => $lost_leads,
             'users' => $users,
             'origins' => $origins,
-            'origins_all' => $origins_all
+            'origins_all' => $origins_all,
+            'incomes' => $incomes
         ]);
     }
 

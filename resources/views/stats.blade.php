@@ -60,31 +60,31 @@
 						    	<div class="row">
 							    	<div class="form-group col-4 text-center">
 									    <label for="number-lead">Total number of Leads</label>
-									    <input type="number" class="form-control text-center" id="number-lead" value="{{$number_of_leads}}" readonly="true">
+									    <input type="text" class="form-control text-center" id="number-lead" value="{{$number_of_leads}}" readonly="true">
 									</div>
 									<div class="form-group col-4 text-center">
 									    <label for="number-successful-lead">Successful leads</label>
-									    <input type="number" class="form-control text-center" id="number-successful-leads" value="{{$successful_leads}}" readonly="true">
+									    <input type="text" class="form-control text-center" id="number-successful-leads" value="{{$successful_leads}}" readonly="true">
 									</div>
 									<div class="form-group col-4 text-center">
 									    <label for="number-lost-lead">Lost leads</label>
-									    <input type="number" class="form-control text-center" id="number-lost-lead" value="{{$lost_leads}}" readonly="true">
+									    <input type="text" class="form-control text-center" id="number-lost-lead" value="{{$lost_leads}}" readonly="true">
 									</div>		
 						    	</div>
 						    	<h6 class="mb-4">That come from:</h6>
 						    	<div class="row">
 									@foreach($origins_all as $origin_single)
 										<div class="form-group col-4 text-center">
-											<label for="number-facebook">{{$origin_single->name}}</label>
+											<label for="number-{{implode('-', explode(' ', $origin_single->name))}}">{{$origin_single->name}}</label>
 										@php $found = false; @endphp
 										@foreach($origins as $origin)
 											@if ($origin_single->id == $origin->id)
-												<input type="number" class="form-control text-center" id="number-facebook" value="{{$origin->total}}" readonly="true">
+												<input type="text" class="form-control text-center" id="number-{{implode('-', explode(' ', $origin->name))}}" value="{{$origin->total}}" readonly="true">
 												@php $found = true; @endphp
 											@endif
 										@endforeach
 										@if (!$found)
-											<input type="number" class="form-control text-center" id="number-facebook" value="0" readonly="true">
+											<input type="text" class="form-control text-center" id="number-{{implode('-', explode(' ', $origin_single->name))}}" value="0" readonly="true">
 										@endif
 										</div>
 									@endforeach
@@ -93,9 +93,9 @@
 						  </div>
 						   <div class="mt-4 d-flex justify-content-end">
 						        <div class="form-group row"> 
-								    <label for="total-sales" class="col-6 col-form-label text-right" ><b>Total Sales Profit: </b></label>
+								    <label for="total-sales" class="col-6 col-form-label text-right" ><b>Total Incomes: </b></label>
 								    <div class="col-6">
-								      <input type="number" class="form-control" id="total-sales" value="560" readonly="true">
+								      <input type="text" class="form-control" id="total-sales" readonly="true" value="${{($incomes) ? $incomes : 0}}">
 								    </div>
 								</div>
 						   </div>
