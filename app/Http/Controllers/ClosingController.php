@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Models\Lead;
 use App\Models\Closing;
 use Illuminate\Http\Request;
+use App\Http\Requests\ClosingCreate;
 
 class ClosingController extends Controller
 {
@@ -31,10 +32,10 @@ class ClosingController extends Controller
     /**
      * Store a newly created resource in storage.
      *
-     * @param  \Illuminate\Http\Request  $request
+     * @param  \App\Http\Requests\ClosingCreate  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request)
+    public function store(ClosingCreate $request)
     {
         $input = $request->all();
         $previousUrl = strtok(url()->previous(), '?');

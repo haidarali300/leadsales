@@ -7,6 +7,7 @@ use App\Models\User;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Str;
+use Illuminate\Support\Facades\Validator;
 
 class UserController extends Controller
 {
@@ -51,6 +52,13 @@ class UserController extends Controller
      */
     public function store(Request $request, $role)
     {
+        $rules = [
+            'name' => 'required|max:127',
+            'phone' => 'required|max:64',
+            'country' => 'required|required:127',
+            'address' => 'required|required:127'
+        ];
+        
         $input = $request->all();
         $input['role'] = $role;
         $input['password']  = isset($input['password']) ? Hash::make($input['password']) : null;
@@ -60,11 +68,15 @@ class UserController extends Controller
             case 'admin':
             case 'salesman':
             case 'supervisor':
+                $rules = array_merge($rules, ['email' => 'required|email|max:127|unique:users,email', 'password' => 'required']);
+                Validator::make($request->all(), $rules)->validate();
                 $client = Client::create($input);
                 $input['client_id'] = $client->id;
                 $user = User::create($input);
                 break;
             case 'client':
+                $rules = array_merge($rules, ['email' => 'required|email|max:127']);
+                Validator::make($request->all(), $rules)->validate();
                 Client::create($input);
                 break;
             default:

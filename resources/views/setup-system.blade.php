@@ -2,7 +2,15 @@
 
 @section('js-extra')
 <script>
-	
+	@error('category') 
+		$(".categories-modal").modal();
+	@enderror
+	@error('origin') 
+		$(".origins-modal").modal();
+	@enderror
+	@error('quality') 
+		$(".qualities-modal").modal();
+	@enderror
 </script>
 @endsection
 
@@ -136,11 +144,13 @@
 								@csrf
 								<div class="form-group">
 									<label for="category-name" class="col-form-label">Name:</label>
-									<input type="text" class="form-control" id="category-name" name="name">
+									<input type="text" class="form-control @error('category') @error('name') is-invalid @enderror @enderror" id="category-name" name="name" value="@error('category'){{old('name')}}@enderror">
+									@error('category') @error('name')<span class="invalid-feedback" role="alert"><strong>{{ $message }}</strong></span>@enderror @enderror
 								</div>
 								<div class="form-group">
 									<label for="category-description" class="col-form-label">Description:</label>
-									<textarea class="form-control" id="category-description" name="description"></textarea>
+									<textarea class="form-control @error('category') @error('description') is-invalid @enderror @enderror" id="category-description" description="description">@error('category'){{old('description')}}@enderror</textarea>
+									@error('category') @error('description')<span class="invalid-feedback" role="alert"><strong>{{ $message }}</strong></span>@enderror @enderror
 								</div>
 							</form>
 						</div>
@@ -210,11 +220,13 @@
 								@csrf
 								<div class="form-group">
 									<label for="origin-name" class="col-form-label">Name:</label>
-									<input type="text" class="form-control" id="origin-name" name="name">
+									<input type="text" class="form-control @error('origin') @error('name') is-invalid @enderror @enderror" id="origin-name" name="name" value="@error('origin'){{old('name')}}@enderror">
+									@error('origin') @error('name')<span class="invalid-feedback" role="alert"><strong>{{ $message }}</strong></span>@enderror @enderror
 								</div>
 								<div class="form-group">
 									<label for="origin-description" class="col-form-label">Description:</label>
-									<textarea class="form-control" id="origin-description" name="description"></textarea>
+									<textarea class="form-control @error('origin') @error('description') is-invalid @enderror @enderror" id="origin-description" name="description">@error('origin'){{old('description')}}@enderror</textarea>
+									@error('origin') @error('description')<span class="invalid-feedback" role="alert"><strong>{{ $message }}</strong></span>@enderror @enderror
 								</div>
 							</form>
 						</div>
@@ -284,7 +296,8 @@
 								@csrf
 								<div class="form-group">
 									<label for="quality-name" class="col-form-label">Name:</label>
-									<input type="text" class="form-control" id="quality-name" name="name">
+									<input type="text" class="form-control @error('quality') @error('name') is-invalid @enderror @enderror" id="quality-name" name="name" value="@error('origin'){{old('name')}}@enderror">
+									@error('quality') @error('name')<span class="invalid-feedback" role="alert"><strong>{{ $message }}</strong></span>@enderror @enderror
 								</div>
 							</form>
 						</div>

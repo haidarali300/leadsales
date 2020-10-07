@@ -123,6 +123,7 @@
 				  </div>
 			    </div>
 				<!--Budget-->
+				@if($lead->stage_id >= 1)
 			    <div class="carousel-item">
 			      <div class="card">
 					  <div class="card-body">
@@ -136,12 +137,14 @@
 									<div class="form-group row mb-5">
 										<label for="budget-num" class="col-3 col-form-label">Budget Number:</label>
 										<div class="col-9">
-											<input type="text" class="form-control" id="budget-num" name="number" value="@if($lead->budget_id){{$lead->budget->number}}@endif">
+											<input type="text" class="form-control @error('number') is-invalid @enderror" id="budget-num" name="number" value="@if($lead->budget_id){{$lead->budget->number}}@else{{old('number')}}@endif">
+											@error('number')<span class="invalid-feedback" role="alert"><strong>{{ $message }}</strong></span>@enderror
 										</div>
 									</div>
 									<div class="custom-file mb-3 ">
-										<input type="file" class="custom-file-input" id="budget_image" name="image">
-										<label class="custom-file-label" for="budget_image">Choose file...</label>   
+										<input type="file" class="custom-file-input @error('image') is-invalid @enderror" id="budget_image" name="image">
+										<label class="custom-file-label" for="budget_image">Choose file...</label>
+										@error('image')<span class="invalid-feedback" role="alert"><strong>{{ $message }}</strong></span>@enderror
 									</div>
 									<div>
 										<img src="@if($lead->budget_id){{asset($lead->budget->image)}}@endif" id="budget_image_display" class="img-fluid" alt="">
@@ -151,7 +154,8 @@
 									<div class="form-group row ">
 										<label for="description" class="col-3">Description</label>
 										<div class="col-9">
-											<textarea class="form-control" id="description" rows="3" name="description">@if($lead->budget_id){{$lead->budget->description}}@endif</textarea>	
+											<textarea class="form-control @error('description') is-invalid @enderror" id="description" rows="3" name="description">@if($lead->budget_id){{$lead->budget->description}}@else{{old('description')}}@endif</textarea>
+											@error('description')<span class="invalid-feedback" role="alert"><strong>{{ $message }}</strong></span>@enderror
 										</div>
 									</div>
 									<div class="text-right">
@@ -170,6 +174,8 @@
 					  </div>
 				  </div>
 			    </div>
+				@endif
+				@if($lead->stage_id >= 2)
 			    <!--Negotiation-->
 			    <div class="carousel-item">
 			      <div class="card">
@@ -184,12 +190,14 @@
 									<div class="form-group row mb-5">
 										<label for="budget-num" class="col-3 col-form-label">Budget Number:</label>
 										<div class="col-9">
-											<input type="text" class="form-control" id="budget-num" name="number" value="@if($lead->negotiation_id){{$lead->negotiation->number}}@endif">
+											<input type="text" class="form-control @error('number') is-invalid @enderror" id="budget-num" name="number" value="@if($lead->negotiation_id){{$lead->negotiation->number}}@else{{old('number')}}@endif">
+											@error('number')<span class="invalid-feedback" role="alert"><strong>{{ $message }}</strong></span>@enderror
 										</div>
 									</div>
 									<div class="custom-file mb-3 ">
-										<input type="file" class="custom-file-input" id="negotiation_image" name="image">
-										<label class="custom-file-label" for="negotiation_image">Choose file...</label>   
+										<input type="file" class="custom-file-input @error('image') is-invalid @enderror" id="negotiation_image" name="image">
+										<label class="custom-file-label" for="negotiation_image">Choose file...</label>
+										@error('image')<span class="invalid-feedback" role="alert"><strong>{{ $message }}</strong></span>@enderror
 									</div>
 									<div>
 										<img src="@if($lead->negotiation_id){{asset($lead->negotiation->image)}}@endif" id="negotiation_image_display" class="img-fluid" alt="">
@@ -199,7 +207,8 @@
 									<div class="form-group row ">
 										<label for="description" class="col-3">Description</label>
 										<div class="col-9">
-											<textarea class="form-control" id="description" rows="3" name="description">@if($lead->negotiation_id){{$lead->negotiation->description}}@endif</textarea>	
+											<textarea class="form-control @error('description') is-invalid @enderror" id="description" rows="3" name="description">@if($lead->negotiation_id){{$lead->negotiation->description}}@else{{old('description')}}@endif</textarea>
+											@error('description')<span class="invalid-feedback" role="alert"><strong>{{ $message }}</strong></span>@enderror
 										</div>
 									</div>
 									<div class="text-right">
@@ -218,6 +227,8 @@
 					  </div>
 				  </div>
 			    </div>
+				@endif
+				@if($lead->stage_id >= 3)
 			    <!--Closing-->
 			    <div class="carousel-item">
 			      <div class="card">
@@ -232,12 +243,14 @@
 									<div class="form-group row mb-5">
 										<label for="invoice-num" class="col-4 col-form-label">Invoice number:</label>
 										<div class="col-8">
-											<input type="text" class="form-control" id="invoice-num" name="invoice_number" value="@if($lead->closing_id){{$lead->closing->invoice_number}}@endif">
+											<input type="text" class="form-control @error('invoice_number') is-invalid @enderror" id="invoice-num" name="invoice_number" value="@if($lead->closing_id){{$lead->closing->invoice_number}}@else{{old('invoice_number')}}@endif">
+											@error('invoice_number')<span class="invalid-feedback" role="alert"><strong>{{ $message }}</strong></span>@enderror
 										</div>
 									</div>
 									<div class="custom-file mb-3 ">
-										<input type="file" class="custom-file-input" id="closing_invoice_image" name="invoice_image">
+										<input type="file" class="custom-file-input @error('invoice_image') is-invalid @enderror" id="closing_invoice_image" name="invoice_image">
 										<label class="custom-file-label" for="closing_invoice_image">Choose file...</label>   
+										@error('invoice_image')<span class="invalid-feedback" role="alert"><strong>{{ $message }}</strong></span>@enderror
 									</div>
 									<div>
 										<img src="@if ($lead->closing_id){{asset($lead->closing->invoice_image)}}@endif" id="closing_invoice_image_display" class="img-fluid" alt="">
@@ -247,12 +260,14 @@
 									<div class="form-group row mb-5">
 										<label for="guide-num" class="col-3 col-form-label">Guide number:</label>
 										<div class="col-9">
-											<input type="text" class="form-control" id="guide-num" name="guide_number" value="@if($lead->closing_id){{$lead->closing->guide_number}}@endif">
+											<input type="text" class="form-control @error('guide_number') is-invalid @enderror" id="guide-num" name="guide_number" value="@if($lead->closing_id){{$lead->closing->guide_number}}@else{{old('guide_number')}}@endif">
+											@error('guide_number')<span class="invalid-feedback" role="alert"><strong>{{ $message }}</strong></span>@enderror
 										</div>
 									</div>
 									<div class="custom-file mb-3 ">
-										<input type="file" class="custom-file-input" id="closing_guide_image" name="guide_image">
+										<input type="file" class="custom-file-input @error('guide_image') is-invalid @enderror" id="closing_guide_image" name="guide_image">
 										<label class="custom-file-label" for="closing_guide_image">Choose file...</label> 
+										@error('guide_image')<span class="invalid-feedback" role="alert"><strong>{{ $message }}</strong></span>@enderror
 									</div>
 									<div>
 										<img src="@if($lead->closing_id){{asset($lead->closing->guide_image)}}@endif" id="closing_guide_image_display" class="img-fluid" alt="">
@@ -260,7 +275,8 @@
 								</div>
 								<label for="income" class="col-2 col-form-label">Income:</label>
 								<div class="col-10">
-									<input class="form-control" step="any" type="number" name="income" value="@if($lead->closing_id){{$lead->closing->income}}@endif">
+									<input class="form-control @error('income') is-invalid @enderror" step="any" type="number" name="income" value="@if($lead->closing_id){{$lead->closing->income}}@else{{old('income')}}@endif">
+									@error('income')<span class="invalid-feedback" role="alert"><strong>{{ $message }}</strong></span>@enderror
 								</div>
 							</div>
 							<div class="text-right">
@@ -277,6 +293,8 @@
 					  </div>
 				  </div>
 			    </div>
+				@endif
+				@if($lead->stage_id >= 4)
 			    <!--Quality of Service-->
 			    <div class="carousel-item">
 			      <div class="card">
@@ -337,6 +355,26 @@
 					  </div>
 				  </div>
 			    </div>
+				@endif
+				@if($lead->stage_id >= 5)
+				<div class="carousel-item">
+			      	<div class="card">
+					  	<div class="card-body">
+					    	<h6 class="mb-4">Lead closed</h6>
+							<div class="row">
+								<div class="col-12">This lead has finished<br> Although you are able to update any stage of this lead</div>
+								<div class="col-12 text-center row mt-4">
+									<div class="col-2"><button onclick="showStage(0)" class="btn btn-color">Contact</button></div>
+									<div class="col-3"><button onclick="showStage(1)" class="btn btn-color">Budget</button></div>
+									<div class="col-2"><button onclick="showStage(2)" class="btn btn-color">Negotiation</button></div>
+									<div class="col-3"><button onclick="showStage(3)" class="btn btn-color">Closing</button></div>
+									<div class="col-2"><button onclick="showStage(4)" class="btn btn-color">Quality of Service</button></div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				@endif
 			  </div>
 			  <a class="carousel-control-prev" href="#carouselLead" role="button" data-slide="prev">
 			    <span class="carousel-control-prev-icon" aria-hidden="true"></span>

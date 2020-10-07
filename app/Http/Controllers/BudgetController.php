@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Models\Budget;
 use App\Models\Lead;
 use Illuminate\Http\Request;
+use App\Http\Requests\BudgetCreate;
 
 class BudgetController extends Controller
 {
@@ -31,10 +32,10 @@ class BudgetController extends Controller
     /**
      * Store a newly created resource in storage.
      *
-     * @param  \Illuminate\Http\Request  $request
+     * @param  \App\Htpp\Requests\BudgetCreate  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request)
+    public function store(BudgetCreate $request)
     {
         $input = $request->all();
         $previousUrl = strtok(url()->previous(), '?');

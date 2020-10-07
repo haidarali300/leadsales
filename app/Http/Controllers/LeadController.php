@@ -11,6 +11,7 @@ use App\Models\Client;
 use App\Models\LeadState;
 use App\Models\QualityCriteria;
 use Illuminate\Http\Request;
+use App\Http\Requests\LeadCreate;
 use Illuminate\Support\Facades\Auth;
 
 class LeadController extends Controller
@@ -85,10 +86,10 @@ class LeadController extends Controller
     /**
      * Store a newly created resource in storage.
      *
-     * @param  \Illuminate\Http\Request  $request
+     * @param  \App\Http\Requests\LeadCreate  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request)
+    public function store(LeadCreate $request)
     {
         $stage = Stage::where('name', 'contact')->first();
         $lead_state = LeadState::where('name', 'active')->first();
@@ -147,9 +148,10 @@ class LeadController extends Controller
 
         $lead->qualityCriterias()->sync($sync_data);
         $lead->stage_id = 5;
+        $lead->lead_state_id = 3;
         $lead->save();
 
-        return redirect()->to($previousUrl . '?' . http_build_query(['show_stage' => 4]));
+        return redirect()->to($previousUrl . '?' . http_build_query(['show_stage' => 5]));
     }
 
     /**

@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Models\Lead;
 use App\Models\Negotiation;
 use Illuminate\Http\Request;
+use App\Http\Requests\NegotiationCreate;
 
 class NegotiationController extends Controller
 {
@@ -31,10 +32,10 @@ class NegotiationController extends Controller
     /**
      * Store a newly created resource in storage.
      *
-     * @param  \Illuminate\Http\Request  $request
+     * @param  \App\Http\Requests\NegotiationCreate  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request)
+    public function store(NegotiationCreate $request)
     {
         $input = $request->all();
         $previousUrl = strtok(url()->previous(), '?');

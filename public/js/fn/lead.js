@@ -7,10 +7,9 @@ const setCountryData = () => {
 window.addEventListener('load', () => {
     let urlParams = new URLSearchParams(window.location.search);
 
-    if (urlParams.has('show_stage'))
-        $("#carouselLead").carousel(parseInt(urlParams.get('show_stage')));
-    else
-        $("#carouselLead").carousel((typeof(stage_id !== 'undefined') ? stage_id : 0));
+    showStage(urlParams.has('show_stage')
+        ? parseInt(urlParams.get('show_stage'))
+        : (typeof(stage_id !== 'undefined') ? stage_id : 0));
 
     $("#category").select2({ placeholder: 'Select a category' });
     $("#origin").select2({ placeholder: 'Select a origin' });
@@ -39,6 +38,10 @@ window.addEventListener('load', () => {
     input.addEventListener("countrychange", () => setCountryData());
     window.addEventListener('submit', () => setCountryData());
 });
+
+const showStage = (stage) => {
+    $("#carouselLead").carousel(stage);
+}
 
 const readURL = (input, image) => {
     if (input.files && input.files[0]) {

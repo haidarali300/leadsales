@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\Origin;
+use App\Http\Requests\OriginCreate;
 use Illuminate\Http\Request;
 
 class OriginController extends Controller
@@ -30,10 +31,10 @@ class OriginController extends Controller
     /**
      * Store a newly created resource in storage.
      *
-     * @param  \Illuminate\Http\Request  $request
+     * @param  \App\Http\Requests\OriginCreate  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request)
+    public function store(OriginCreate $request)
     {
         $input = $request->all();
         $origin = Origin::create($input);

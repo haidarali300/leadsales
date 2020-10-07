@@ -23,7 +23,8 @@
 					<div class="row">
 						<legend class="col-form-label col-sm-2 pt-0">Full name:</legend>
 						<div class="col-10">
-							<input type="text" class="form-control" placeholder="Full Name" name="name" value="@if(isset($user) && isset($user['name'])){{$user['name']}}@endif" required>
+							<input type="text" class="form-control @error('name') is-invalid @enderror" placeholder="Full Name" name="name" value="@if(isset($user) && isset($user['name'])){{$user['name']}}@endif" required>
+							@error('name')<span class="invalid-feedback" role="alert"><strong>{{ $message }}</strong></span>@enderror
 						</div>
 					    <fieldset class="form-group col-6 mt-3">
 						    <div class="row">
@@ -41,20 +42,23 @@
 								        <option>...</option>
 								     </select>
 						        </div>--}}
-						        <div>
-						          <input id="phone" type="text" class="form-control" placeholder="Phone Number" value="@if(isset($user) && isset($user['phone'])){{$user['phone']}}@endif" name="phone">
+						        <div class="@error('phone') is-invalid @enderror">
+						          <input id="phone" type="text" class="form-control @error('phone') is-invalid @enderror" placeholder="Phone Number" value="@if(isset($user) && isset($user['phone'])){{$user['phone']}}@endif" name="phone">
 						        </div>
+								@error('phone')<span class="invalid-feedback" role="alert"><strong>{{ $message }}</strong></span>@enderror
 						      </div>
 						    </div>
 							<div class="row mt-4">
 								<legend class="col-form-label col-sm-3 pt-0">Email:</legend>
 								<div class="col-9">
 									<div class="form-group">
-										<input type="email" class="form-control" placeholder="Email" name="email" value="@if(isset($user) && isset($user['email'])){{$user['email']}}@endif" required>
+										<input type="email" class="form-control @error('email') is-invalid @enderror" placeholder="Email" name="email" value="@if(isset($user) && isset($user['email'])){{$user['email']}}@endif" required>
+										@error('email')<span class="invalid-feedback" role="alert"><strong>{{ $message }}</strong></span>@enderror
 									</div>
 									@if ($create_user)
 									<div class="form-group">
-										<input class="form-control" type="password" placeholder="Password" name="password" required>
+										<input class="form-control @error('password') is-invalid @enderror" type="password" placeholder="Password" name="password" required>
+										@error('password')<span class="invalid-feedback" role="alert"><strong>{{ $message }}</strong></span>@enderror
 									</div>
 									@endif
 								</div>
@@ -66,10 +70,12 @@
 						      <div class="col-8">
 						        <div class="form-group">
 									<input type="hidden" name="iso2" id="country-iso2">
-									<input readonly type="text" value="United States" class="form-control" name="country" value="@if(isset($user) && isset($user['country'])){{$user['country']}}@endif" id="country">
+									<input readonly type="text" value="United States" class="form-control @error('country') is-invalid @enderror" name="country" value="@if(isset($user) && isset($user['country'])){{$user['country']}}@endif" id="country">
+									@error('country')<span class="invalid-feedback" role="alert"><strong>{{ $message }}</strong></span>@enderror
 						        </div>
 						        <div class="form-group">
-									<input type="text" class="form-control" placeholder="Address" name="address" value="@if(isset($user) && isset($user['address'])){{$user['address']}}@endif" required>
+									<input type="text" class="form-control @error('address') is-invalid @enderror" placeholder="Address" name="address" value="@if(isset($user) && isset($user['address'])){{$user['address']}}@endif" required>
+									@error('address')<span class="invalid-feedback" role="alert"><strong>{{ $message }}</strong></span>@enderror
 						        </div>
 						      </div>
 						    </div>

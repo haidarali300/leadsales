@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\QualityCriteria;
+use App\Http\Requests\QualityCriteriaCreate;
 use Illuminate\Http\Request;
 
 class QualityCriteriaController extends Controller
@@ -30,10 +31,10 @@ class QualityCriteriaController extends Controller
     /**
      * Store a newly created resource in storage.
      *
-     * @param  \Illuminate\Http\Request  $request
+     * @param  \App\Http\Requests\QualityCriteriaCreate  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request)
+    public function store(QualityCriteriaCreate $request)
     {
         $input = $request->all();
         $criteria = QualityCriteria::create($input);
