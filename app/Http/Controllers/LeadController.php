@@ -73,7 +73,7 @@ class LeadController extends Controller
         $supervisors = User::role('supervisor')->get();
         $salesmen = User::role('salesman')->get();
         $categories = Category::where('active', 1)->get();
-        $origins = Origin::all();
+        $origins = Origin::where('active', 1)->get();
         
         return view('create-lead', [
             'supervisors' => $supervisors,
