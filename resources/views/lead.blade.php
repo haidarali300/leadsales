@@ -10,6 +10,14 @@
 @section('content')
  	<main class="">
  		<div class="container my-4 ">
+			@can('leads.lost')
+			@if($lead->lead_state_id != 2)
+			<form class="mb-2" action="{{route('leads.lost', ['lead' => $lead])}}" method="POST" onsubmit="return confirm('uwu')">
+				@csrf
+				<button type="submit" class="btn btn-primary">Mark as lost</button>
+			</form>
+			@endif
+			@endcan
 			<div id="carouselLead" class="carousel slide" data-ride="carousel" data-interval="false">
 			  <div class="carousel-inner">
 			  	<!--Contact-->

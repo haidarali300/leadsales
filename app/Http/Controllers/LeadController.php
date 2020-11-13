@@ -64,6 +64,19 @@ class LeadController extends Controller
     }
 
     /**
+     * 
+     * 
+     */
+    public function lost($id)
+    {
+        $lead = Lead::where('id', $id)
+                      ->first();
+        $lead->lead_state_id = 2;
+        $lead->save();
+        return redirect()->route('leads.index');
+    }
+
+    /**
      * Show the form for creating a new resource.
      *
      * @return \Illuminate\Http\Response

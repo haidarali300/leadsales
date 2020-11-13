@@ -26,6 +26,7 @@ Route::middleware(['auth'])->group(function() {
         Route::get   ('/leads/new', 'LeadController@new')->name('leads.new');
         Route::post  ('/leads', 'LeadController@store')->name("leads.store");
         Route::get   ('/leads/create', 'LeadController@create')->name("leads.create");
+        Route::post  ('/leads/{lead}/lost', 'LeadController@lost')->name("leads.lost");
     });
 
     Route::group (['middleware' => ['role:salesman|supervisor|admin']], function () {

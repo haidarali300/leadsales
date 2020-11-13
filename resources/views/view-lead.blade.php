@@ -42,13 +42,26 @@
 								  <div class="p-2 bd-highlight">{{$lead->salesman->name}}</div>
 								  <div class="p-2 bd-highlight">{{($lead->supervisor) ? $lead->supervisor->name : 'Supervisor: Not assigned'}}</div>
 								  <div class="p-2 bd-highlight mt-n1">
-								  	<a class="btn btn-dot" href="{{route('leads.show', ['lead' => $lead->id])}}" role="button">
-								  		<svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-dots" width="34" height="34" viewBox="0 0 24 24" stroke-width="1.5" stroke="#000000" fill="none" stroke-linecap="round" stroke-linejoin="round">
-										  <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
-										  <circle cx="5" cy="12" r="1" />
-										  <circle cx="12" cy="12" r="1" />
-										  <circle cx="19" cy="12" r="1" />
-										</svg>
+									<div class="dropdown">
+										<button class="btn btn-dot" type="button" id="lost" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+											<svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-dots" width="34" height="34" viewBox="0 0 24 24" stroke-width="1.5" stroke="#000000" fill="none" stroke-linecap="round" stroke-linejoin="round">
+												<path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+												<circle cx="5" cy="12" r="1" />
+												<circle cx="12" cy="12" r="1" />
+												<circle cx="19" cy="12" r="1" />
+											</svg>
+										</button>
+										<div class="dropdown-menu" aria-labelledby="lost">
+											<a class="dropdown-item" href="{{route('leads.show', ['lead' => $lead->id])}}" role="button">View</a>
+											@can('leads.lost')
+											<div class="dropdown-divider"></div>
+											<form action="{{route('leads.lost', ['lead' => $lead->id])}}" method="POST">
+												@csrf
+											  	<button class="dropdown-item" type="submit">Mark as lost</button>
+											</form>
+											@endcan
+										</div>
+									  </div>
 								  	</a>
 								  </div>
 								</div>
@@ -105,14 +118,19 @@
 								  <div class="p-2 bd-highlight">{{$lead->salesman->name}}</div>
 								  <div class="p-2 bd-highlight">{{($lead->supervisor) ? $lead->supervisor->name : 'Supervisor: Not assigned'}}</div>
 								  <div class="p-2 bd-highlight mt-n1">
-								  	<a class="btn btn-dot" href="{{route('leads.show', ['lead' => $lead->id])}}" role="button">
-								  		<svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-dots" width="34" height="34" viewBox="0 0 24 24" stroke-width="1.5" stroke="#000000" fill="none" stroke-linecap="round" stroke-linejoin="round">
-										  <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
-										  <circle cx="5" cy="12" r="1" />
-										  <circle cx="12" cy="12" r="1" />
-										  <circle cx="19" cy="12" r="1" />
-										</svg>
-								  	</a>
+									<div class="dropdown">
+										<button class="btn btn-dot" type="button" id="lost" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+											<svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-dots" width="34" height="34" viewBox="0 0 24 24" stroke-width="1.5" stroke="#000000" fill="none" stroke-linecap="round" stroke-linejoin="round">
+												<path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+												<circle cx="5" cy="12" r="1" />
+												<circle cx="12" cy="12" r="1" />
+												<circle cx="19" cy="12" r="1" />
+											</svg>
+										</button>
+										<div class="dropdown-menu" aria-labelledby="lost">
+											<a class="dropdown-item" href="{{route('leads.show', ['lead' => $lead->id])}}" role="button">View</a>
+										</div>
+									  </div>
 								  </div>
 								</div>
 								<div class="containerA">
@@ -168,14 +186,17 @@
 								  <div class="p-2 bd-highlight">{{$lead->salesman->name}}</div>
 								  <div class="p-2 bd-highlight">{{($lead->supervisor) ? $lead->supervisor->name : 'Supervisor: Not assigned'}}</div>
 								  <div class="p-2 bd-highlight mt-n1">
-								  	<a class="btn btn-dot" href="{{route('leads.show', ['lead' => $lead->id])}}" role="button">
-								  		<svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-dots" width="34" height="34" viewBox="0 0 24 24" stroke-width="1.5" stroke="#000000" fill="none" stroke-linecap="round" stroke-linejoin="round">
-										  <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
-										  <circle cx="5" cy="12" r="1" />
-										  <circle cx="12" cy="12" r="1" />
-										  <circle cx="19" cy="12" r="1" />
+									<button class="btn btn-dot" type="button" id="lost" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+										<svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-dots" width="34" height="34" viewBox="0 0 24 24" stroke-width="1.5" stroke="#000000" fill="none" stroke-linecap="round" stroke-linejoin="round">
+											<path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+											<circle cx="5" cy="12" r="1" />
+											<circle cx="12" cy="12" r="1" />
+											<circle cx="19" cy="12" r="1" />
 										</svg>
-								  	</a>
+									</button>
+									<div class="dropdown-menu" aria-labelledby="lost">
+										<a class="dropdown-item" href="{{route('leads.show', ['lead' => $lead->id])}}" role="button">View</a>
+									</div>
 								  </div>
 								</div>
 								<div class="containerA">

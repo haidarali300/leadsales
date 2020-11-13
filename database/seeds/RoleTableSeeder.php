@@ -91,6 +91,7 @@ class RoleTableSeeder extends Seeder
             'users.edit',
             'users.destroy',
             'users.show',
+            'leads.lost'
         ];
 
         $supervisor_permissions = [
@@ -113,6 +114,7 @@ class RoleTableSeeder extends Seeder
             'leads.store',
             'leads.show',
             'leads.new',
+            'leads.lost',
             'lead.qualities.store',
             'users.update',
             'budgets.update',
