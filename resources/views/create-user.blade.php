@@ -49,8 +49,8 @@
 						      </div>
 						    </div>
 							<div class="row mt-4">
-								<legend class="col-form-label col-sm-3 pt-0">Email:</legend>
-								<div class="col-9">
+								<legend class="col-form-label col-sm-4 pt-0">Email:</legend>
+								<div class="col-8">
 									<div class="form-group">
 										<input type="email" class="form-control @error('email') is-invalid @enderror" placeholder="Email" name="email" value="@if(isset($user) && isset($user['email'])){{$user['email']}}@endif" required>
 										@error('email')<span class="invalid-feedback" role="alert"><strong>{{ $message }}</strong></span>@enderror

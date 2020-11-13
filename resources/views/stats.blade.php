@@ -18,13 +18,7 @@
 			  </li>
 			  <li class="nav-item" role="presentation">
 			    <a class="nav-link" onclick="selectTab('v-graphs')" id="v-graphs-tab" data-toggle="tab" href="#v-graphs" role="tab" aria-controls="v-graphs" aria-selected="true">View Graphs</a>
-			  </li>
-			  <li class="nav-item" role="presentation">
-			    <a class="nav-link" onclick="selectTab('g-report')" id="g-report-tab" data-toggle="tab" href="#g-report" role="tab" aria-controls="g-report" aria-selected="false">Generate Report</a>
-			  </li>
-			  <li class="nav-item" role="presentation">
-			    <a class="nav-link" onclick="selectTab('g-graphs')" id="g-graphs-tab" data-toggle="tab" href="#g-graphs" role="tab" aria-controls="g-graphs" aria-selected="false">Generate Graphs</a>
-			  </li>
+			  </li>			  
 			</ul>
 			<!--Content tab-->
 			<div class="tab-content" id="myTabContent">
@@ -138,9 +132,7 @@
 					</div>
 					@endforeach
 		  		</div>
-			  </div>
-			  <div class="tab-pane fade" id="g-report" role="tabpanel" aria-labelledby="g-report-tab">In construction</div>
-			  <div class="tab-pane fade" id="g-graphs" role="tabpanel" aria-labelledby="g-graphs-tab">In construction</div>
+			  </div>			 
 			</div>
  		</div>
  	</main>
